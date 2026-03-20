@@ -1,0 +1,118 @@
+:root {
+  /* Colors */
+  --color-bg-primary: #0a0f1c;
+  --color-bg-secondary: #111827;
+  --color-accent-blue: #2563eb;
+  --color-accent-blue-light: #60a5fa;
+  --color-accent-gold: #d4af37;
+  --color-accent-gold-light: #fcd34d;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Glassmorphism Utilities */
+.glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card:hover {
+  border-color: rgba(212, 175, 55, 0.3); /* Gold tint on hover */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-secondary); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-blue); 
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.logo-image, .logo-image-footer { height: 50px; width: auto; object-fit: contain; }
+
+
+/* Advanced Framer Ambient Glow */
+.ambient-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: -1; pointer-events: none; }
+.ambient-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.4; pointer-events: none; }
+.orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, var(--color-accent-blue) 0%, transparent 70%); }
+.orb-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, var(--color-accent-gold) 0%, transparent 70%); opacity: 0.15; }
+
+/* Button Upgrades */
+.btn-primary { position: relative; overflow: hidden; z-index: 1; }
+.btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; z-index: -1; }
+.btn-primary:hover::before { left: 100%; }
+
+
