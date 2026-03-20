@@ -16,7 +16,7 @@ export default function About() {
       bio: "Mr. Jiten has a natural flair for cultivating out-of-the-box thinking. In his capacity as a Director, he is a key person behind strategic decision making and in the past has led many successful initiatives for the company. With substantial experience in the financial services industry, Mr. Jiten is responsible for the management and growth of the company's business. He is a quick problem solver for the company and is designated as a CMA by the Institute of Cost Accountants of India."
     },
     {
-      name: "Mr. Nihar Waghela",
+      name: "Mr. Nihar",
       role: "Director - Derivatives and Risk Management",
       bio: "Overseeing the complex modeling and rapid execution of our algorithmic systems. Ensures strict adherence to hedging protocols, dynamic option greek balancing, and institutional-grade risk parameters across global liquidity pools."
     }
