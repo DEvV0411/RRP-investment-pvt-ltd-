@@ -40,6 +40,19 @@
   margin-right: 0.5rem;
 }
 
+.logo-image {
+  height: 60px;
+  max-width: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+  transform: scale(1.02);
+}
+
 .nav-links {
   display: flex;
   align-items: center;

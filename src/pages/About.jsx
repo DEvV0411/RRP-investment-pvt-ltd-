@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Target, Eye, Users, ChevronRight } from 'lucide-react';
+import { Target, Eye, ChevronRight } from 'lucide-react';
 import './Pages.css';
 
 export default function About() {
@@ -27,38 +27,45 @@ export default function About() {
       <div className="container relative z-10">
         <div className="page-header mt-12 mb-16">
           <div className="section-subtitle">Firm Profile</div>
-          <h1 className="page-title">Enabling Financial Excellence</h1>
+          <h1 className="page-title mb-8">About Us</h1>
+          <div className="max-w-4xl mx-auto" style={{ textAlign: 'center', lineHeight: '1.9', fontSize: '1.15rem', color: '#94a3b8' }}>
+             <p className="mb-6">We are a cutting-edge High-Frequency Trading (HFT) firm leveraging advanced AI-driven algorithms, ultra-low latency infrastructure, and institutional-grade trading platforms such as Falcon and Bloomberg Red Box. Our core strength lies in combining quantitative research, machine learning, and high-speed execution systems to identify and capitalize on market inefficiencies in real time.</p>
+             <p>With a strong focus on innovation and precision, we operate in a fast-paced environment where technology and finance intersect. Our team consists of experienced traders, engineers, and data scientists committed to building scalable, intelligent trading solutions that perform across dynamic global markets.</p>
+          </div>
         </div>
 
-        {/* Vision, Mission, Who We Are */}
-        <div className="grid-3-cols mt-8 mb-24">
+        {/* Vision and Mission */}
+        <div className="grid-2-cols mt-8 mb-24 gap-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-            <div className="fin-card h-full text-center items-center">
-              <Eye size={40} className="text-yellow-500 mb-6" />
-              <h3 className="fin-card-title border-b border-gray-700/50 pb-4 w-full">Vision</h3>
-              <p className="fin-card-desc pt-4">
-                To enable people to contribute to and share the wealth of a nation through high professional excellence in capital markets.
+            <div className="fin-card h-full text-center items-center" style={{ padding: '4rem', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%)', borderTop: '4px solid #3b82f6' }}>
+              <Eye size={48} className="text-blue-500 mb-6 mx-auto" style={{ filter: 'drop-shadow(0 0 10px rgba(59, 130, 246, 0.5))' }} />
+              <h3 className="fin-card-title border-b border-gray-700/50 pb-4 w-full text-3xl font-bold mb-6">Vision</h3>
+              <p className="text-gray-300 leading-relaxed text-lg pt-2 mt-4">
+                To become a global leader in algorithmic and high-frequency trading by continuously pushing the boundaries of technology, speed, and intelligence in financial markets.
               </p>
             </div>
           </motion.div>
           
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-            <div className="fin-card h-full text-center items-center">
-              <Target size={40} className="text-yellow-500 mb-6" />
-              <h3 className="fin-card-title border-b border-gray-700/50 pb-4 w-full">Mission</h3>
-              <p className="fin-card-desc pt-4">
-                To provide unparalleled service with integrity to our clients to create value.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-            <div className="fin-card h-full text-center items-center">
-              <Users size={40} className="text-yellow-500 mb-6" />
-              <h3 className="fin-card-title border-b border-gray-700/50 pb-4 w-full">Who We Are</h3>
-              <p className="fin-card-desc pt-4">
-                We are a group of highly experienced professionals striving to create value through our expertise in capital markets.
-              </p>
+            <div className="fin-card h-full text-left items-start" style={{ padding: '4rem', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%)', borderTop: '4px solid #d4af37' }}>
+              <div className="text-center w-full">
+                 <Target size={48} className="text-yellow-500 mb-6 mx-auto" style={{ filter: 'drop-shadow(0 0 10px rgba(212, 175, 55, 0.5))' }} />
+                 <h3 className="fin-card-title border-b border-gray-700/50 pb-4 w-full text-3xl font-bold mb-6 text-center">Mission</h3>
+              </div>
+              <ul className="flex flex-col gap-4 mt-4 list-none p-0">
+                {[
+                  "To develop and deploy high-performance AI-powered trading strategies",
+                  "To maintain ultra-low latency systems for optimal execution",
+                  "To foster innovation through research in quantitative finance and machine learning",
+                  "To create opportunities for young talent to excel in financial technology",
+                  "To uphold integrity, transparency, and excellence in all our operations"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-4 items-start text-gray-300">
+                    <div className="w-2 h-2 rounded-full bg-yellow-500 mt-2 shrink-0"></div>
+                    <span className="leading-relaxed text-lg">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         </div>
