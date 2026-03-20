@@ -111,22 +111,30 @@ export default function Careers() {
           </motion.div>
         </div>
 
-        {/* Culture */}
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <div className="fin-card text-center p-12 relative overflow-hidden" style={{ borderTop: '1px solid rgba(59, 130, 246, 0.4)', background: 'linear-gradient(180deg, rgba(30, 58, 138, 0.15) 0%, rgba(13, 18, 30, 0.8) 100%)' }}>
-            <HeartHandshake size={64} className="mx-auto text-blue-500 mb-6 opacity-80" />
-            <h3 className="text-3xl font-bold text-white mb-6">Execution Requires Excellence</h3>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
-              Candidates are selected and promoted purely based on merits. Our engineers and researchers are inspired by working alongside the most talented people in the industry and delivering imaginative new solutions that are redefining the future of algorithmic finance. <br/><br/>
-              <span className="text-yellow-500 font-bold uppercase tracking-widest text-sm border-b border-yellow-500 pb-1">Uncompromising Standards.</span>
-            </p>
+          <div className="fin-card relative overflow-hidden" style={{ padding: '5rem 4rem', textAlign: 'center', borderTop: '4px solid #3b82f6', background: 'linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(8, 12, 20, 0.95) 100%)' }}>
+            {/* Background glow effect */}
+            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '300px', height: '300px', borderRadius: '50%', background: 'rgba(59, 130, 246, 0.06)', filter: 'blur(48px)', pointerEvents: 'none' }} />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2.5rem' }}>
+                <HeartHandshake size={40} style={{ color: '#60a5fa', filter: 'drop-shadow(0 0 10px rgba(59,130,246,0.6))' }} />
+              </div>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', margin: '0 0 1.5rem' }}>Execution Requires Excellence</h3>
+              <p style={{ color: '#94a3b8', fontSize: '1.15rem', lineHeight: 1.8, maxWidth: '700px', margin: '0 auto 2.5rem' }}>
+                Candidates are selected and promoted purely based on merits. Our engineers and researchers are inspired by working alongside the most talented people in the industry, delivering solutions that redefine the future of algorithmic finance.
+              </p>
+              <span style={{ display: 'inline-block', color: '#d4af37', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '3px', borderBottom: '2px solid #d4af37', paddingBottom: '4px' }}>
+                Uncompromising Standards.
+              </span>
+            </div>
           </div>
         </motion.div>
+
       </div>
 
       {/* Application Modal */}
