@@ -41,7 +41,7 @@ export default function About() {
             <img src="/Logo.png" alt="RRP Investments Logo" style={{ maxWidth: '100%', width: '450px', filter: 'drop-shadow(0 0 20px rgba(59,130,246,0.3))' }} />
           </div>
           <p className="page-subtitle max-w-4xl mx-auto" style={{ textAlign: 'center', lineHeight: '1.9', fontSize: '1.15rem' }}>
-            We are a cutting-edge High-Frequency Trading (HFT) firm leveraging advanced AI-driven algorithms, ultra-low latency infrastructure, and institutional-grade trading platforms such as Falcon and Bloomberg Red Box.
+            We are a cutting-edge quantitative trading firm leveraging advanced AI-driven algorithms, ultra-low latency infrastructure, and institutional-grade trading platforms such as Falcon and Bloomberg Red Box.
           </p>
 
           {/* Strategic Partnership */}
@@ -86,7 +86,7 @@ export default function About() {
               </div>
               <h3 style={{ fontSize: '2rem', fontWeight: 800, color: 'white', marginBottom: '1rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>Vision</h3>
               <p style={{ color: '#cbd5e1', lineHeight: 1.85, fontSize: '1.05rem', marginTop: '1.5rem' }}>
-                To become a global leader in algorithmic and high-frequency trading by continuously pushing the boundaries of technology, speed, and intelligence in financial markets.
+                To become a global leader in algorithmic and quantitative trading by continuously pushing the boundaries of technology, speed, and intelligence in financial markets.
               </p>
             </div>
           </motion.div>

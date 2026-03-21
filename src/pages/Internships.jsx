@@ -25,9 +25,9 @@ export default function Internships() {
       <div className="container relative z-10">
         <div className="page-header mt-12 mb-16">
           <div className="section-subtitle">Early Careers</div>
-          <h1 className="page-title">HFT Internships</h1>
+          <h1 className="page-title">Quantitative Internships</h1>
           <p className="page-subtitle max-w-4xl mx-auto mb-8" style={{ textAlign: 'center' }}>
-             We offer structured internship programs for college students who are passionate about finance, technology, and data. Experience the raw intersection of high-frequency engineering and quantitative modeling.
+             We offer structured internship programs for college students who are passionate about finance, technology, and data. Experience the raw intersection of financial engineering and quantitative modeling.
           </p>
         </div>
 

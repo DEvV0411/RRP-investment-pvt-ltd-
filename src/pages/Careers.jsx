@@ -16,7 +16,7 @@ export default function Careers() {
   ];
 
   const benefits = [
-    "Exposure to real-world high-frequency trading systems",
+    "Exposure to real-world algorithmic trading systems",
     "Work with cutting-edge AI and financial technologies",
     "Performance-driven growth opportunities",
     "Collaborative and innovation-focused culture"
