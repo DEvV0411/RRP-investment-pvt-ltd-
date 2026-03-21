@@ -10,72 +10,65 @@ export default function Home() {
   return (
     <div className="page-wrapper" style={{ paddingTop: 0, overflowX: 'hidden' }}>
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center p-4" style={{ background: '#080c14', position: 'relative' }}>
-        {/* Dynamic Background */}
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'url(https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80)', backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.1, mixBlendMode: 'screen', filter: 'grayscale(80%) mt-4' }}></div>
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(8,12,20,0.4) 0%, rgba(8,12,20,1) 100%)' }}></div>
-        
-        {/* Glowing Orbs */}
-        <motion.div 
-          animate={{ x: [0, 50, 0], y: [0, -30, 0], scale: [1, 1.1, 1] }} 
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          style={{ position: 'absolute', top: '25%', left: '20%', width: '350px', height: '350px', background: '#d4af37', borderRadius: '50%', filter: 'blur(120px)', opacity: 0.3, mixBlendMode: 'screen' }}
+      {/* Hero Section — Full-Screen Photo */}
+      <section style={{ position: 'relative', width: '100%', height: '100vh', minHeight: '600px', overflow: 'hidden', background: '#050810' }}>
+        {/* Primary full-bleed photo */}
+        <img
+          src="/hero-trading-wide.png"
+          alt="RRP Investments HFT Trading Floor"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.85 }}
         />
-        <motion.div 
-          animate={{ x: [0, -40, 0], y: [0, 50, 0], scale: [1, 1.2, 1] }} 
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          style={{ position: 'absolute', bottom: '20%', right: '20%', width: '400px', height: '400px', background: '#3b82f6', borderRadius: '50%', filter: 'blur(140px)', opacity: 0.2, mixBlendMode: 'screen' }}
-        />
+        {/* Dark vignette overlay so edges don't distract */}
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 30%, rgba(0,0,0,0.7) 100%)' }} />
+        {/* Bottom gradient for info card readability */}
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(5,8,16,0.95) 0%, rgba(5,8,16,0.3) 50%, transparent 100%)' }} />
+        {/* Top gold accent line */}
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, transparent, #d4af37, transparent)', zIndex: 5 }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '160px', paddingBottom: '90px' }}>
-          
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '8px 24px', borderRadius: '50px', marginBottom: '2rem', background: 'rgba(15, 23, 42, 0.6)', border: '1px solid rgba(212, 175, 55, 0.3)', backdropFilter: 'blur(10px)' }}
-          >
-            <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#22c55e', boxShadow: '0 0 10px #22c55e', animation: 'pulse 2s infinite' }}></span>
-            <span style={{ color: '#d4af37', fontWeight: 600, letterSpacing: '2px', fontSize: '0.9rem', textTransform: 'uppercase' }}>Global Markets Active</span>
-          </motion.div>
-          
-          <h1 style={{ fontWeight: 800, color: 'white', marginBottom: '2rem', lineHeight: 1.1, fontSize: 'clamp(3rem, 6vw, 5.5rem)', letterSpacing: '-1px' }}>
-            <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>Creating Wealth</motion.span> <br />
-            <motion.span 
-               initial={{ opacity: 0, y: 20 }} 
-               animate={{ opacity: 1, y: 0 }} 
-               transition={{ duration: 0.8, delay: 0.3 }}
-               style={{ background: 'linear-gradient(135deg, #fde047 0%, #d4af37 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block' }}
+        {/* Floating info card — bottom left */}
+        <div style={{ position: 'absolute', bottom: '80px', left: 0, right: 0, zIndex: 10 }}>
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
+              style={{ maxWidth: '750px' }}
             >
-               Through Precision.
-            </motion.span>
-          </h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            style={{ maxWidth: '800px', margin: '0 auto 3.5rem auto', fontSize: '1.25rem', color: '#94a3b8', lineHeight: 1.7, fontWeight: 300 }}
-          >
-            Proprietary capital driven by decades of institutional experience. Powered by sophisticated algorithmic and qualitative strategy. We execute flawlessly to extract absolute alpha.
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}
-          >
-            <Link to="/business" className="btn-gold-solid" style={{ fontSize: '1.1rem', padding: '15px 35px', display: 'flex', alignItems: 'center', boxShadow: '0 0 30px rgba(212,175,55,0.4)', border: 'none' }}>
-              Discover Strategies <Activity size={20} style={{ marginLeft: '12px' }} />
-            </Link>
-            <Link to="/about" className="btn-gold-outline" style={{ fontSize: '1.1rem', padding: '15px 35px', background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center' }}>
-              The Firm <ChevronRight size={20} style={{ marginLeft: '10px' }} />
-            </Link>
-          </motion.div>
+              {/* Company name block */}
+              <h1 style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5rem)', fontWeight: 900, color: 'white', lineHeight: 1.1, margin: '0 0 0.5rem', letterSpacing: '-1px', textShadow: '0 4px 30px rgba(0,0,0,0.9)' }}>
+                RRP Investments
+              </h1>
+              <p style={{ color: '#d4af37', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '3px', textTransform: 'uppercase', margin: '0 0 2rem', textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>
+                Private Limited
+              </p>
+              {/* Domain tags — what the firm works with, no proof needed */}
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+                {[
+                  'Algorithmic Trading',
+                  'Machine Learning',
+                  'Quantitative Finance',
+                  'Low Latency Systems',
+                ].map((tag, i) => (
+                  <div key={i} style={{ padding: '7px 18px', borderRadius: '6px', background: 'rgba(10,15,25,0.8)', border: '1px solid rgba(212,175,55,0.2)', backdropFilter: 'blur(10px)' }}>
+                    <span style={{ color: '#d4af37', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>{tag}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                <Link to="/business" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 32px', background: 'linear-gradient(135deg, #d4af37, #b48608)', color: 'black', fontWeight: 800, borderRadius: '8px', textDecoration: 'none', fontSize: '1rem', boxShadow: '0 0 25px rgba(212,175,55,0.5)', border: 'none', transition: 'transform 0.2s' }}>
+                  Discover Strategies <Activity size={18} style={{ marginLeft: '10px' }} />
+                </Link>
+                <Link to="/about" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 32px', background: 'rgba(255,255,255,0.07)', color: 'white', fontWeight: 700, borderRadius: '8px', textDecoration: 'none', fontSize: '1rem', border: '1px solid rgba(255,255,255,0.2)', backdropFilter: 'blur(10px)' }}>
+                  The Firm <ChevronRight size={18} style={{ marginLeft: '8px' }} />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
+
+
 
       {/* Excellence Delivered */}
       <section className="container" style={{ position: 'relative', zIndex: 20, marginTop: '-60px', marginBottom: '80px' }}>
@@ -95,30 +88,11 @@ export default function Home() {
                 We are a group of highly experienced professionals striving to create value through our expertise in capital markets. We provide unparalleled service with absolute integrity to construct long-lasting wealth.
               </p>
               
-              <div style={{ display: 'flex', gap: '3rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2.5rem' }}>
-                <div>
-                  <h3 style={{ fontSize: '3rem', fontWeight: 800, color: 'white', margin: '0 0 0.5rem 0' }}><AnimatedCounter end={20} suffix="+" /></h3>
-                  <p style={{ color: '#d4af37', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600, margin: 0 }}>Years Experience</p>
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '3rem', fontWeight: 800, color: 'white', margin: '0 0 0.5rem 0' }}><AnimatedCounter end={100} suffix="%" /></h3>
-                  <p style={{ color: '#d4af37', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 600, margin: 0 }}>Proprietary Capital</p>
-                </div>
-              </div>
             </div>
 
             {/* Right Image Container */}
             <div style={{ position: 'relative', width: '100%', minHeight: '400px', borderLeft: '1px solid rgba(255,255,255,0.1)' }}>
-               <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Corporate" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, borderTopRightRadius: '15px', borderBottomRightRadius: '15px' }} />
-               <div style={{ position: 'absolute', bottom: '2rem', left: '2rem', right: '2rem', background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.1)', padding: '1.5rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                   <div>
-                     <p style={{ color: 'white', fontWeight: 'bold', fontSize: '1.2rem', margin: '0 0 0.25rem 0' }}>Premium Operations</p>
-                     <p style={{ color: '#d4af37', fontSize: '0.9rem', margin: 0 }}>Tier 1 Option Strategies</p>
-                   </div>
-                   <div style={{ width: '50px', height: '50px', background: 'rgba(212,175,55,0.2)', border: '1px solid rgba(212,175,55,0.5)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d4af37' }}>
-                     <TrendingUp size={24} />
-                   </div>
-               </div>
+               <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Algorithmic Trading Network" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, borderTopRightRadius: '15px', borderBottomRightRadius: '15px' }} />
             </div>
           </div>
         </motion.div>

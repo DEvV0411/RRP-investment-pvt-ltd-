@@ -27,12 +27,8 @@ export default function About() {
     }
   ];
 
-  const stats = [
-    { value: "20+", label: "Years of Experience" },
-    { value: "HFT", label: "Core Strategy" },
-    { value: "AI", label: "Driven Execution" },
-    { value: "24/7", label: "Systems Monitoring" }
-  ];
+
+
 
   return (
     <div className="page-wrapper pb-24">
@@ -41,25 +37,45 @@ export default function About() {
         {/* Header */}
         <div className="page-header mt-12 mb-16">
           <div className="section-subtitle">Firm Profile</div>
-          <h1 className="page-title mb-8">About Us</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+            <img src="/Logo.png" alt="RRP Investments Logo" style={{ maxWidth: '100%', width: '450px', filter: 'drop-shadow(0 0 20px rgba(59,130,246,0.3))' }} />
+          </div>
           <p className="page-subtitle max-w-4xl mx-auto" style={{ textAlign: 'center', lineHeight: '1.9', fontSize: '1.15rem' }}>
             We are a cutting-edge High-Frequency Trading (HFT) firm leveraging advanced AI-driven algorithms, ultra-low latency infrastructure, and institutional-grade trading platforms such as Falcon and Bloomberg Red Box.
           </p>
+
+          {/* Strategic Partnership */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginTop: '4rem', marginBottom: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <p style={{ color: '#94a3b8', fontSize: '0.9rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1.5rem' }}>In Strategic Partnership With</p>
+            <div style={{ background: '#ffffff', padding: '1.2rem 3rem', borderRadius: '12px', display: 'inline-flex', boxShadow: '0 8px 32px rgba(59, 130, 246, 0.1)', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(255,255,255,0.1)' }}>
+              <img 
+                src="/nirmal-bang-logo.png" 
+                alt="Nirmal Bang" 
+                style={{ height: '55px', objectFit: 'contain' }} 
+              />
+            </div>
+          </motion.div>
         </div>
 
-        {/* Stats Bar */}
+        {/* Domain Tags Bar */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginBottom: '5rem' }}>
-          <div className="fin-card" style={{ padding: '0', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(8, 12, 20, 0.9) 100%)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)' }}>
-              {stats.map((stat, i) => (
-                <div key={i} style={{ padding: '2.5rem', textAlign: 'center', borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none' }}>
-                  <div style={{ fontSize: '2.5rem', fontWeight: 900, color: '#d4af37', marginBottom: '0.5rem', letterSpacing: '-1px' }}>{stat.value}</div>
-                  <div style={{ color: '#64748b', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>{stat.label}</div>
+          <div className="fin-card" style={{ padding: '2rem 2.5rem', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(8, 12, 20, 0.9) 100%)' }}>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
+              {[
+                'Algorithmic Trading',
+                'Machine Learning',
+                'Quantitative Finance',
+                'Low Latency Systems',
+                'Decades of Experience',
+              ].map((tag, i) => (
+                <div key={i} style={{ padding: '8px 22px', borderRadius: '6px', background: 'rgba(10,15,25,0.8)', border: '1px solid rgba(212,175,55,0.2)' }}>
+                  <span style={{ color: '#d4af37', fontSize: '0.82rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>{tag}</span>
                 </div>
               ))}
             </div>
           </div>
         </motion.div>
+
 
         {/* Vision and Mission */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', marginBottom: '6rem' }}>
