@@ -23,7 +23,7 @@ export default function Navbar() {
       {/* Logo row — sits above the nav links, full-width with guaranteed dark contrast */}
       <div className="nav-logo-bar">
         <Link to="/" className="nav-logo">
-          <img src="/Logo.png" alt="RRP Investments Logo" className="logo-image" />
+          <img src="/logo.png" alt="RRP Investments Logo" className="logo-image" />
         </Link>
       </div>
 

@@ -46,6 +46,12 @@ export default function AIChatbot() {
     setInput('');
     setIsLoading(true);
 
+    if (!import.meta.env.VITE_GROQ_API_KEY) {
+      setMessages((prev) => [...prev, { role: 'assistant', content: "SYSTEM ERROR: VITE_GROQ_API_KEY is missing from Vercel Environment Variables. Please add your API keys to Vercel." }]);
+      setIsLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
         method: "POST",

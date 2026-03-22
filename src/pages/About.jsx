@@ -39,7 +39,7 @@ export default function About() {
         <div className="page-header mt-12 mb-16">
           <div className="section-subtitle">Firm Profile</div>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-            <img src="/Logo.png" alt="RRP Investments Logo" style={{ maxWidth: '100%', width: '450px', filter: 'drop-shadow(0 0 20px rgba(59,130,246,0.3))' }} />
+            <img src="/logo.png" alt="RRP Investments Logo" style={{ maxWidth: '100%', width: '450px', filter: 'drop-shadow(0 0 20px rgba(59,130,246,0.3))' }} />
           </div>
           <p className="page-subtitle max-w-4xl mx-auto" style={{ textAlign: 'center', lineHeight: '1.9', fontSize: '1.15rem' }}>
             We are a cutting-edge quantitative trading firm leveraging advanced AI-driven algorithms, ultra-low latency infrastructure, and institutional-grade trading platforms such as Falcon and Bloomberg Red Box.

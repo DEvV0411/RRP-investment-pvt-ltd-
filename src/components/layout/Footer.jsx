@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <Link to="/" className="nav-logo">
-            <img src="/Logo.png" alt="RRP Investments Logo" className="logo-image-footer" />
+            <img src="/logo.png" alt="RRP Investments Logo" className="logo-image-footer" />
           </Link>
           <p className="footer-desc">
             Creating wealth through expertise in capital markets. Driven by experience, powered by strategy, delivering consistent financial growth.
