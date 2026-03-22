@@ -44,9 +44,33 @@
 /* Grids */
 .grid-2-cols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .grid-3-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-@media(max-width: 900px) { 
+@media (max-width: 1024px) { 
   .grid-2-cols, .grid-3-cols { grid-template-columns: 1fr; } 
+  .page-title { font-size: 3rem; }
+}
+
+/* Responsive Form & About Grids */
+.form-grid-2 { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1.5rem; }
+.about-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 6rem; }
+.about-grid-mixed { display: grid; grid-template-columns: 1fr 2fr; gap: 0; }
+
+@media (max-width: 768px) {
+  html { font-size: 14px !important; }
+  .grid-2-cols, .grid-3-cols, .form-grid-2, .about-grid-2, .about-grid-mixed { grid-template-columns: 1fr !important; }
   .page-title { font-size: 2.5rem; }
+  .page-subtitle { font-size: 1.05rem; }
+  .fin-card { padding: 1.5rem; }
+  .fin-card-title { font-size: 1.3rem; }
+  
+  /* Make all primary buttons full-width */
+  button[type="submit"], .btn-gold-solid, .page-header button { width: 100%; justify-content: center; margin-top: 1rem; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 13px !important; }
+  .page-title { font-size: 2rem; }
+  .container { padding: 0 16px; }
+  .page-wrapper { padding-top: 100px; }
 }
 
 /* Institutional Fin-Cards */

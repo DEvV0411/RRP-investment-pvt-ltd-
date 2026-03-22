@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Target, Eye, ChevronRight, Cpu, Users } from 'lucide-react';
 import './Pages.css';
@@ -78,7 +79,7 @@ export default function About() {
 
 
         {/* Vision and Mission */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', marginBottom: '6rem' }}>
+        <div className="about-grid-2">
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <div className="fin-card" style={{ padding: '4rem', height: '100%', boxSizing: 'border-box', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%)', borderTop: '4px solid #3b82f6' }}>
               <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'rgba(59,130,246,0.08)', border: '1px solid rgba(59,130,246,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
@@ -118,7 +119,7 @@ export default function About() {
         {/* What We Do */}
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginBottom: '6rem' }}>
           <div className="fin-card" style={{ padding: '0', overflow: 'hidden', borderTop: '4px solid #8b5cf6', background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(8, 12, 20, 0.9) 100%)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 0 }}>
+            <div className="about-grid-mixed">
               <div style={{ padding: '4rem', borderRight: '1px solid rgba(255,255,255,0.06)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <div style={{ width: '60px', height: '60px', borderRadius: '14px', background: 'rgba(139,92,246,0.08)', border: '1px solid rgba(139,92,246,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '2rem' }}>
                   <Cpu size={30} style={{ color: '#a78bfa' }} />

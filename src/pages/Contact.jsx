@@ -1,14 +1,29 @@
 import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, Clock, Building2 } from 'lucide-react';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../firebase';
 import './Pages.css';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSubmitted(true);
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    
+    try {
+      await addDoc(collection(db, "contact_inquiries"), {
+        ...data,
+        timestamp: serverTimestamp()
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting contact form: ", error);
+      alert("Failed to send message. Please try again.");
+    }
   }
 
   return (
@@ -98,23 +113,23 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                  <div className="form-grid-2">
                     <div>
                       <label style={{ display: 'block', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.6rem' }}>First Name</label>
-                      <input type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="John" />
+                      <input name="firstName" type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="John" />
                     </div>
                     <div>
                       <label style={{ display: 'block', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.6rem' }}>Last Name</label>
-                      <input type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="Doe" />
+                      <input name="lastName" type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="Doe" />
                     </div>
                   </div>
                   <div>
                     <label style={{ display: 'block', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.6rem' }}>Email Address</label>
-                    <input type="email" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="john@company.com" />
+                    <input name="email" type="email" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="john@company.com" />
                   </div>
                   <div>
                     <label style={{ display: 'block', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.6rem' }}>Nature of Inquiry</label>
-                    <select required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(15,23,42,1)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', cursor: 'pointer', fontSize: '1rem' }}>
+                    <select name="inquiryType" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(15,23,42,1)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', cursor: 'pointer', fontSize: '1rem' }}>
                       <option value="">Select topic...</option>
                       <option value="institutional">Institutional Partnership</option>
                       <option value="careers">Careers / Recruitment</option>
@@ -124,7 +139,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label style={{ display: 'block', color: '#94a3b8', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.6rem' }}>Message</label>
-                    <textarea required rows={5} style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', resize: 'vertical', fontFamily: 'inherit', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="Please describe your inquiry..." />
+                    <textarea name="message" required rows={5} style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem', resize: 'vertical', fontFamily: 'inherit', transition: 'border-color 0.2s' }} onFocus={e => e.target.style.borderColor = '#d4af37'} onBlur={e => e.target.style.borderColor = 'rgba(255,255,255,0.1)'} placeholder="Please describe your inquiry..." />
                   </div>
                   <button type="submit" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '16px 32px', background: 'linear-gradient(135deg, #d4af37 0%, #b48608 100%)', color: 'black', fontWeight: 800, fontSize: '1.1rem', borderRadius: '8px', border: 'none', cursor: 'pointer', boxShadow: '0 0 20px rgba(212,175,55,0.3)', transition: 'transform 0.2s, box-shadow 0.2s' }} onMouseOver={e => { e.currentTarget.style.transform='scale(1.02)'; e.currentTarget.style.boxShadow='0 0 30px rgba(212,175,55,0.5)'; }} onMouseOut={e => { e.currentTarget.style.transform='scale(1)'; e.currentTarget.style.boxShadow='0 0 20px rgba(212,175,55,0.3)'; }}>
                     <Send size={20} />
