@@ -1,14 +1,16 @@
 :root {
-  /* Colors */
-  --color-bg-primary: #0a0f1c;
-  --color-bg-secondary: #111827;
-  --color-accent-blue: #2563eb;
-  --color-accent-blue-light: #60a5fa;
-  --color-accent-gold: #d4af37;
-  --color-accent-gold-light: #fcd34d;
-  --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
-  --color-border: rgba(255, 255, 255, 0.1);
+  /* Deep Teal Palette (from user sample) */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #eaf4f4;
+  --color-accent-green: #006D6D;          /* Deep rich teal */
+  --color-accent-green-dark: #005858;     /* Hover / gradient end */
+  --color-accent-green-light: #008888;    /* Lighter teal */
+  --color-accent-green-muted: #d6ecec;    /* Pale teal bg tint */
+  --color-accent-emerald: #006D6D;
+  --color-text-main: #011f1f;            /* Near-black teal */
+  --color-text-muted: #2d5c5c;           /* Muted deep teal */
+  --color-text-light: #5a9090;
+  --color-border: rgba(0, 109, 109, 0.15);
 
   /* Typography */
   --font-heading: 'Montserrat', sans-serif;
@@ -45,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-text-main);
 }
 
 a {
@@ -56,40 +59,32 @@ ul {
   list-style: none;
 }
 
-/* Glassmorphism Utilities */
+/* Light Card Glassmorphism */
 .glass-effect {
-  background: rgba(17, 24, 39, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(0, 109, 109, 0.15);
 }
 
 .glass-card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(240,250,245,0.9) 100%);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 109, 109, 0.12);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 109, 109, 0.06);
 }
 
 .glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.3); /* Gold tint on hover */
+  border-color: rgba(0, 109, 109, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 109, 109, 0.12);
 }
 
 /* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-bg-primary); 
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-bg-secondary); 
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-blue); 
-}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #eaf4f4; }
+::-webkit-scrollbar-thumb { background: #b2deda; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-green); }
 
 /* Layout Utilities */
 .container {
@@ -99,27 +94,20 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
+  .container { padding: 0 1rem; }
 }
 
-.section-padding {
-  padding: 5rem 0;
-}
+.section-padding { padding: 5rem 0; }
 
 .logo-image, .logo-image-footer { height: 50px; width: auto; object-fit: contain; }
 
-
-/* Advanced Framer Ambient Glow */
+/* Ambient Glow — subtle green tints on light bg */
 .ambient-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden; z-index: -1; pointer-events: none; }
-.ambient-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.4; pointer-events: none; }
-.orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, var(--color-accent-blue) 0%, transparent 70%); }
-.orb-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, var(--color-accent-gold) 0%, transparent 70%); opacity: 0.15; }
+.ambient-orb { position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none; }
+.orb-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(0, 109, 109,0.08) 0%, transparent 70%); }
+.orb-2 { bottom: -20%; right: -10%; width: 60vw; height: 60vw; background: radial-gradient(circle, rgba(0, 109, 109,0.05) 0%, transparent 70%); }
 
-/* Button Upgrades */
+/* Button Sheen */
 .btn-primary { position: relative; overflow: hidden; z-index: 1; }
-.btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s ease; z-index: -1; }
+.btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s ease; z-index: -1; }
 .btn-primary:hover::before { left: 100%; }
-
-
