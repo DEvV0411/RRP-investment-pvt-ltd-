@@ -2,69 +2,106 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
+const NAV_LINKS = [
+  { path: '/',            label: 'Home' },
+  { path: '/about',       label: 'About Us' },
+  { path: '/business',    label: 'Business' },
+  { path: '/careers',     label: 'Careers' },
+  { path: '/internships', label: 'Internships' },
+  { path: '/contact',     label: 'Contact' },
+];
+
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled]     = useState(false);
+  const [mobileOpen, setMobileOpen]     = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+
+
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      {/* Logo row — sits above the nav links, full-width with guaranteed dark contrast */}
-      <div className="nav-logo-bar">
-        <Link to="/" className="nav-logo">
-          <img src="/logo.png?v=2" alt="RRP Investments Logo" className="logo-image" />
+    <>
+      {/* ─── Top logo strip ─── */}
+      <div className="nav-brand-strip">
+        <Link to="/" className="nav-logo-link">
+          <img src="/logo.png?v=2" alt="RRP Investments" className="logo-image" />
         </Link>
       </div>
 
-      {/* Links row */}
-      <div className="nav-links-bar">
-        <div className="container nav-container">
-          <div className={`nav-links ${mobileMenuOpen ? 'open' : ''}`}>
-            {[
-              { path: '/', label: 'Home' },
-              { path: '/about', label: 'About Us' },
-              { path: '/business', label: 'Our Business' },
-              { path: '/careers', label: 'Careers' },
-              { path: '/internships', label: 'Internships' },
-              { path: '/contact', label: 'Contact' }
-            ].map((item) => {
+      {/* ─── Floating pill nav ─── */}
+      <div className={`pill-nav-wrapper ${isScrolled ? 'scrolled' : ''}`}>
+        <motion.div
+          className="pill-nav"
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 28, delay: 0.1 }}
+        >
+          {/* Desktop links */}
+          <nav className="pill-links">
+            {NAV_LINKS.map((item) => {
               const isActive = location.pathname === item.path;
               return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`nav-link ${isActive ? 'active' : ''}`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                <Link key={item.path} to={item.path} className={`pill-link ${isActive ? 'active' : ''}`}>
                   {isActive && (
                     <motion.div
-                      layoutId="nav-pill"
-                      className="nav-pill"
-                      transition={{ type: 'spring', stiffness: 450, damping: 35 }}
+                      layoutId="pill-indicator"
+                      className="pill-active-bg"
+                      transition={{ type: 'spring', stiffness: 500, damping: 38 }}
                     />
                   )}
-                  <span className="relative z-10">{item.label}</span>
+                  {isActive && <span className="pill-dot" />}
+                  <span className="pill-label">{item.label}</span>
                 </Link>
               );
             })}
-          </div>
+          </nav>
 
-          <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {/* Mobile hamburger (inside pill) */}
+          <button
+            className="pill-menu-btn"
+            onClick={() => setMobileOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
-        </div>
+        </motion.div>
+
+        {/* ─── Mobile drawer ─── */}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              className="mobile-drawer"
+              initial={{ opacity: 0, y: -10, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.97 }}
+              transition={{ duration: 0.22 }}
+            >
+              {NAV_LINKS.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className={`mobile-link ${isActive ? 'active' : ''}`}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {isActive && <span className="pill-dot" />}
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </nav>
+    </>
   );
 }
