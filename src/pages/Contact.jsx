@@ -54,9 +54,8 @@ export default function Contact() {
                     <Building2 size={22} />
                   </div>
                   <div>
-                    <p style={{ color: '#d4af37', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Registered Office</p>
                     <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1.05rem', lineHeight: 1.6 }}>RRP Investments Private Limited</p>
-                    <p style={{ color: '#94a3b8', lineHeight: 1.7, marginTop: '0.25rem' }}>Mumbai, Maharashtra, India</p>
+                    <p style={{ color: '#94a3b8', lineHeight: 1.7, marginTop: '0.25rem' }}>7th Floor, B Wing, Khandelwal House,<br/>Poddar Rd, Near Poddar Park,<br/>Malad (E), Mumbai-400097</p>
                   </div>
                 </div>
 
@@ -77,7 +76,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ color: '#4ade80', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Direct Lines</p>
-                    <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1.05rem' }}>+91 (22) 1234-5678</p>
+                    <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1.05rem' }}>—</p>
                   </div>
                 </div>
 

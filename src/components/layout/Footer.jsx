@@ -35,16 +35,16 @@ export default function Footer() {
           <h4>Contact Us</h4>
           <ul>
             <li>
-              <MapPin size={18} className="contact-icon" />
-              <span>123 Financial District, Mumbai, India 400001</span>
+              <MapPin size={18} className="contact-icon" style={{ flexShrink: 0, marginTop: '4px' }}/>
+              <span style={{ lineHeight: '1.5' }}>7th Floor, B Wing, Khandelwal House, Poddar Rd, Near Poddar Park, Malad (E), Mumbai-400097</span>
             </li>
             <li>
-              <Mail size={18} className="contact-icon" />
+              <Mail size={18} className="contact-icon" style={{ flexShrink: 0, marginTop: '4px' }}/>
               <a href="mailto:hr@rrpinvestments.com">hr@rrpinvestments.com</a>
             </li>
             <li>
-              <Phone size={18} className="contact-icon" />
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <Phone size={18} className="contact-icon" style={{ flexShrink: 0, marginTop: '4px' }}/>
+              <a href="tel:"></a>
             </li>
           </ul>
         </div>

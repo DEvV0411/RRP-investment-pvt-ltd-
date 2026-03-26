@@ -85,7 +85,7 @@ export default function Home() {
               <div style={{ color: '#d4af37', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Excellence Delivered</div>
               <h2 style={{ fontSize: '3rem', fontWeight: 800, color: 'white', marginBottom: '2rem', lineHeight: 1.2 }}>Elite Financial <br/><span style={{ color: '#94a3b8' }}>Engineering.</span></h2>
               <p style={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                We are a group of highly experienced professionals striving to create value through our expertise in capital markets. We provide unparalleled service with absolute integrity to construct long-lasting wealth.
+                The company operates as a technology-driven, research-oriented trading organization, integrating algorithmic models, AI/ML techniques, and data-driven systems with equity, futures, and options trading strategies.
               </p>
               
             </div>

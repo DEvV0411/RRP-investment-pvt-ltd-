@@ -10,18 +10,79 @@ import './Pages.css';
 export default function Internships() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const gains = [
-    "Hands-on experience with live trading environments",
-    "Training in algorithmic trading and AI models",
-    "Mentorship from industry experts",
-    "Exposure to platforms like Falcon and Bloomberg systems",
-    "Opportunity for full-time placement based on performance"
-  ];
-
-  const requirements = [
-    "Students pursuing Engineering, Computer Science, Finance, Mathematics, or related fields",
-    "Strong analytical and problem-solving skills",
-    "Basic knowledge of programming (Python, C++, or similar) is preferred"
+  const internships = [
+    {
+      title: "Equity Research Intern",
+      icon: <Laptop size={24} />,
+      color: "#3b82f6",
+      overview: "The intern will support equity analysis by combining fundamental and technical research to identify potential trading and investment opportunities in Indian markets.",
+      responsibilities: [
+        "Conduct fundamental analysis including financial statements, sector trends, and macroeconomic factors",
+        "Perform technical analysis using price patterns, indicators, and momentum signals",
+        "Track and analyze company news, earnings, and market developments",
+        "Assist in preparing research reports and trading ideas",
+        "Maintain data and support ongoing research initiatives"
+      ],
+      skills: [
+        "Basic understanding of equity markets",
+        "Interest in financial analysis",
+        "Familiarity with Excel / basic data tools"
+      ]
+    },
+    {
+      title: "Derivatives Intern",
+      icon: <Target size={24} />,
+      color: "#d4af37",
+      overview: "The intern will gain exposure to futures and options markets, focusing on strategy development, market tracking, and risk management concepts.",
+      responsibilities: [
+        "Assist in monitoring index and stock futures and options positions",
+        "Support development of options strategies (spreads, hedging, income strategies)",
+        "Track option chain data and key metrics (OI, IV, Greeks basics)",
+        "Analyze market movements and identify trading opportunities",
+        "Prepare basic reports on strategy performance and risk exposure"
+      ],
+      skills: [
+        "Basic understanding of derivatives markets",
+        "Interest in options trading and strategies",
+        "Analytical mindset"
+      ]
+    },
+    {
+      title: "Quantitative Research Intern",
+      icon: <BrainCircuit size={24} />,
+      color: "#8b5cf6",
+      overview: "The intern will work on developing and testing data-driven trading models, focusing on structured analysis and systematic approaches.",
+      responsibilities: [
+        "Assist in building quantitative models using market data",
+        "Perform data analysis and basic backtesting of strategies",
+        "Work with time series data and statistical techniques",
+        "Support development of algorithmic trading ideas",
+        "Document findings and assist in improving model performance"
+      ],
+      skills: [
+        "Basic knowledge of statistics and financial markets",
+        "Familiarity with Python (preferred but not mandatory)",
+        "Strong problem-solving ability"
+      ]
+    },
+    {
+      title: "Business Development Intern",
+      icon: <Rocket size={24} />,
+      color: "#10b981",
+      overview: "The intern will support the company’s growth initiatives by working on client outreach, partnerships, and market positioning.",
+      responsibilities: [
+        "Assist in identifying and engaging with potential clients and partners",
+        "Support creation of presentations, proposals, and communication materials",
+        "Conduct research on market trends and competitor positioning",
+        "Maintain and update client databases and outreach records",
+        "Coordinate with internal teams for business and marketing initiatives"
+      ],
+      skills: [
+        "Strong communication and interpersonal skills",
+        "Basic understanding of financial markets (preferred)",
+        "Interest in business development and client interaction"
+      ]
+    }
   ];
 
   return (
@@ -29,78 +90,79 @@ export default function Internships() {
       <div className="container relative z-10">
         <div className="page-header mt-12 mb-16">
           <div className="section-subtitle">Early Careers</div>
-          <h1 className="page-title">Quantitative Internships</h1>
-          <p className="page-subtitle max-w-4xl mx-auto mb-8" style={{ textAlign: 'center' }}>
-             We offer structured internship programs for college students who are passionate about finance, technology, and data. Experience the raw intersection of financial engineering and quantitative modeling.
+          <h1 className="page-title">Structured Internships</h1>
+          <p className="page-subtitle max-w-4xl mx-auto mb-8" style={{ textAlign: 'center', lineHeight: 1.8 }}>
+            Gaining practical exposure through an internship is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles.
           </p>
         </div>
 
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <button 
+            onClick={() => setIsModalOpen(true)} 
+            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: '16px 40px', background: 'linear-gradient(135deg, #d4af37 0%, #b48608 100%)', color: 'black', fontWeight: 'bold', fontSize: '1.2rem', borderRadius: '8px', boxShadow: '0 0 20px rgba(212,175,55,0.4)', border: 'none', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.03)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            Apply for Internship
+          </button>
+        </div>
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem', marginBottom: '6rem' }}>
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-             <div className="fin-card" style={{ padding: '4rem', borderTop: '5px solid #d4af37', background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%)' }}>
-                
-                {/* Header Section */}
-                <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', marginBottom: '4rem', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '3rem' }}>
-                  <div style={{ flex: '1 1 500px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-                      <div style={{ width: '60px', height: '60px', backgroundColor: 'rgba(212, 175, 55, 0.1)', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#d4af37' }}>
-                        <BrainCircuit size={32} />
+          {internships.map((internship, idx) => (
+            <motion.div key={idx} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+               <div className="fin-card" style={{ padding: '3.5rem', borderTop: `5px solid ${internship.color}`, background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(8, 12, 20, 0.95) 100%)' }}>
+                  
+                  {/* Header Section */}
+                  <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', marginBottom: '3rem', borderBottom: '1px solid rgba(255, 255, 255, 0.05)', paddingBottom: '2.5rem' }}>
+                    <div style={{ flex: '1 1 500px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                        <div style={{ width: '60px', height: '60px', backgroundColor: `${internship.color}15`, border: `1px solid ${internship.color}40`, borderRadius: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: internship.color }}>
+                          {internship.icon}
+                        </div>
+                        <h2 style={{ fontSize: '2.2rem', fontWeight: 800, color: 'white', margin: 0 }}>{internship.title}</h2>
                       </div>
-                      <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'white', margin: 0 }}>Quantitative & <span style={{ color: '#d4af37' }}>Systems Engineering</span></h2>
+                      <p style={{ color: '#94a3b8', fontSize: '1.1rem', lineHeight: 1.6, marginTop: '1rem', maxWidth: '800px', margin: 0 }}>
+                        {internship.overview}
+                      </p>
                     </div>
-                    <p style={{ color: '#94a3b8', fontSize: '1.2rem', lineHeight: 1.6, marginTop: '1rem', maxWidth: '800px', margin: 0 }}>
-                      Join the core algorithms and systems team. Help build and deploy ultra-low latency frameworks directly connected to institutional liquidity pools.
-                    </p>
-                  </div>
-                  
-                  <div style={{ minWidth: '220px', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '0.75rem' }}>
-                     <span style={{ color: '#64748b', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>Cycle</span>
-                     <span style={{ color: 'white', fontWeight: 800, fontSize: '1.5rem', backgroundColor: 'rgba(255,255,255,0.05)', padding: '0.5rem 1.5rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }}>Rolling Application</span>
-                     <button onClick={() => setIsModalOpen(true)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', marginTop: '0.5rem', padding: '14px 0', background: 'linear-gradient(135deg, #d4af37 0%, #b48608 100%)', color: 'black', fontWeight: 'bold', fontSize: '1.1rem', borderRadius: '6px', boxShadow: '0 0 15px rgba(212,175,55,0.3)', border: 'none', cursor: 'pointer', transition: 'transform 0.2s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.04)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-                        Apply Now <Navigation size={18} style={{ marginLeft: '8px' }} />
-                     </button>
-                  </div>
-                </div>
-
-                {/* Body Content */}
-                <div className="grid-2-cols" style={{ gap: '4rem' }}>
-                  
-                  {/* Left Column: What You'll Gain */}
-                  <div>
-                    <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'white', marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                       <span style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(59, 130, 246, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(59, 130, 246, 0.3)', color: '#60a5fa' }}><Laptop size={20} /></span>
-                       What You’ll Gain
-                    </h3>
-                    <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: 0, margin: 0, listStyle: 'none' }}>
-                       {gains.map((gain, idx) => (
-                          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem', color: '#cbd5e1' }}>
-                             <CheckCircle2 size={24} style={{ color: '#3b82f6', flexShrink: 0, marginTop: '2px' }} />
-                             <span style={{ lineHeight: 1.6, fontSize: '1.1rem' }}>{gain}</span>
-                          </li>
-                       ))}
-                    </ul>
                   </div>
 
-                  {/* Right Column: Requirements */}
-                  <div>
-                     <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'white', marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                        <span style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(212, 175, 55, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(212, 175, 55, 0.3)', color: '#d4af37' }}><Target size={20} /></span>
-                        Who Can Apply
-                     </h3>
-                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', padding: 0, margin: '0 0 2.5rem 0', listStyle: 'none' }}>
-                       {requirements.map((req, idx) => (
-                          <li key={idx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem', color: '#cbd5e1' }}>
-                             <div style={{ width: '10px', height: '10px', backgroundColor: '#d4af37', borderRadius: '2px', marginTop: '8px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
-                             <span style={{ lineHeight: 1.6, fontSize: '1.1rem' }}>{req}</span>
-                          </li>
-                       ))}
-                     </ul>
-                  </div>
-                  
-                </div>
+                  {/* Body Content */}
+                  <div className="grid-2-cols" style={{ gap: '4rem' }}>
+                    
+                    {/* Left Column: Responsibilities */}
+                    <div>
+                      <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'white', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                         Key Responsibilities
+                      </h3>
+                      <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: 0, margin: 0, listStyle: 'none' }}>
+                         {internship.responsibilities.map((resp, ridx) => (
+                            <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#cbd5e1' }}>
+                               <div style={{ width: '8px', height: '8px', backgroundColor: internship.color, borderRadius: '2px', marginTop: '6px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
+                               <span style={{ lineHeight: 1.6, fontSize: '1.05rem' }}>{resp}</span>
+                            </li>
+                         ))}
+                      </ul>
+                    </div>
 
-             </div>
-          </motion.div>
+                    {/* Right Column: Requirements */}
+                    <div>
+                       <h3 style={{ fontSize: '1.4rem', fontWeight: 800, color: 'white', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                          Skills Required
+                       </h3>
+                       <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', padding: 0, margin: 0, listStyle: 'none' }}>
+                         {internship.skills.map((req, ridx) => (
+                            <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#cbd5e1' }}>
+                               <CheckCircle2 size={20} style={{ color: internship.color, flexShrink: 0, marginTop: '2px' }} />
+                               <span style={{ lineHeight: 1.6, fontSize: '1.05rem' }}>{req}</span>
+                            </li>
+                         ))}
+                       </ul>
+                    </div>
+                    
+                  </div>
+
+               </div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -137,18 +199,31 @@ export default function Internships() {
                   setIsModalOpen(false); 
                 } catch (err) { console.error(err); alert("Error submitting application."); }
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              <div>
-                <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Full Name *</label>
-                <input name="fullName" type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="John Doe" />
-              </div>
-              <div className="form-grid-2">
+              {/* Personal Info */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 <div>
-                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Email *</label>
-                  <input name="email" type="email" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="john@university.edu" />
+                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Full Name *</label>
+                  <input name="fullName" type="text" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="John Doe" />
+                </div>
+                <div className="form-grid-2">
+                  <div>
+                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Email *</label>
+                    <input name="email" type="email" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="john@university.edu" />
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Phone Number *</label>
+                    <input name="phone" type="tel" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="+91 98765 43210" />
+                  </div>
                 </div>
                 <div>
-                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Phone Number *</label>
-                  <input name="phone" type="tel" required style={{ width: '100%', boxSizing: 'border-box', padding: '14px 16px', borderRadius: '8px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none', fontSize: '1rem' }} placeholder="+91 98765 43210" />
+                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.85rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Applying For *</label>
+                  <select name="applyingFor" required style={{ width: '100%', padding: '12px', borderRadius: '8px', background: 'rgba(15, 23, 42, 1)', border: '1px solid rgba(255,255,255,0.1)', color: 'white', outline: 'none' }}>
+                    <option value="">Select...</option>
+                    <option value="Equity Research Intern">Equity Research Intern</option>
+                    <option value="Derivatives Intern">Derivatives Intern</option>
+                    <option value="Quantitative Research Intern">Quantitative Research Intern</option>
+                    <option value="Business Development Intern">Business Development Intern</option>
+                  </select>
                 </div>
               </div>
 
