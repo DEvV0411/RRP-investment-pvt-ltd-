@@ -15,7 +15,7 @@ export default function Payment() {
             
             <div className="text-center">
                <p className="text-gray-300 text-lg mb-8">Authentication infrastructure is currently restricted to active trading partners only.</p>
-               <button className="section-subtitle bg-transparent" style={{ border: '1px solid #d4af37', padding: '0.75rem 2rem' }}>Secure Login Unavailable</button>
+               <div style={{ color: '#d4af37', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.85rem' }}>Secure Login Unavailable</div>
             </div>
         </motion.div>
       </div>

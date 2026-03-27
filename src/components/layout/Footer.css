@@ -12,6 +12,12 @@
   margin-bottom: 4rem;
 }
 
+.logo-image-footer {
+  height: 50px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
 .footer-brand .footer-desc {
   margin: 1.5rem 0;
   color: #2d5c5c;

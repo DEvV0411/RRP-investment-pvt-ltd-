@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
+import StockTicker from '../ui/StockTicker';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -29,22 +30,14 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ─── Top logo strip ─── */}
-      <div className="nav-brand-strip">
-        <Link to="/" className="nav-logo-link">
-          <img src="/logo.png?v=2" alt="RRP Investments" className="logo-image" />
-        </Link>
-      </div>
+      {/* ─── Unified Header Strip ─── */}
+      <header className={`nav-brand-strip ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="container nav-container">
+          <Link to="/" className="nav-logo-link">
+            <img src="/Logo.png?v=3" alt="RRP Investments" className="logo-image" />
+          </Link>
 
-      {/* ─── Floating pill nav ─── */}
-      <div className={`pill-nav-wrapper ${isScrolled ? 'scrolled' : ''}`}>
-        <motion.div
-          className="pill-nav"
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 28, delay: 0.1 }}
-        >
-          {/* Desktop links */}
+          {/* Desktop links inside the same bar */}
           <nav className="pill-links">
             {NAV_LINKS.map((item) => {
               const isActive = location.pathname === item.path;
@@ -64,7 +57,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Mobile hamburger (inside pill) */}
+          {/* Mobile hamburger */}
           <button
             className="pill-menu-btn"
             onClick={() => setMobileOpen(o => !o)}
@@ -72,7 +65,7 @@ export default function Navbar() {
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
-        </motion.div>
+        </div>
 
         {/* ─── Mobile drawer ─── */}
         <AnimatePresence>
@@ -101,7 +94,7 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </header>
     </>
   );
 }

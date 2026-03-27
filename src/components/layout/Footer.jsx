@@ -8,16 +8,11 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <Link to="/" className="nav-logo">
-            <img src="/logo.png?v=2" alt="RRP Investments Logo" className="logo-image-footer" />
+            <img src="/Logo.png?v=3" alt="RRP Investments Logo" className="logo-image-footer" />
           </Link>
           <p className="footer-desc">
             Creating wealth through expertise in capital markets. Driven by experience, powered by strategy, delivering consistent financial growth.
           </p>
-          <div className="social-links">
-            <a href="#" aria-label="LinkedIn"><Linkedin size={20} /></a>
-            <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
-            <a href="#" aria-label="Facebook"><Facebook size={20} /></a>
-          </div>
         </div>
 
         <div className="footer-links">
@@ -27,7 +22,6 @@ export default function Footer() {
             <li><Link to="/business">Our Business</Link></li>
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/internships">Internships</Link></li>
-            <li><Link to="/payment">Pay Fees</Link></li>
           </ul>
         </div>
 

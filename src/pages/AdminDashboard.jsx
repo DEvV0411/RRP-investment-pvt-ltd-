@@ -130,7 +130,7 @@ export default function AdminDashboard() {
         
         <div className="page-header mt-12 mb-12" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '2rem' }}>
           <div>
-            <div className="section-subtitle">Secure Access</div>
+
             <h1 className="page-title" style={{ textAlign: 'left', margin: 0 }}>Executive Dashboard</h1>
           </div>
           <button 

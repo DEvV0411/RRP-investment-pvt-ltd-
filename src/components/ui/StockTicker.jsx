@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 
-export default function StockTicker() {
+export default function StockTicker({ variant = 'bottom' }) {
   const containerRef = useRef(null);
+  const isTop = variant === 'top';
 
   useEffect(() => {
     if (!containerRef.current) return;
-    // Clear any previous widget
     containerRef.current.innerHTML = '';
 
     const script = document.createElement('script');
@@ -20,63 +20,67 @@ export default function StockTicker() {
         { proName: 'NSE:TCS', title: 'TCS' },
         { proName: 'NSE:INFY', title: 'Infosys' },
         { proName: 'NSE:HDFCBANK', title: 'HDFC Bank' },
-        { proName: 'NSE:ICICIBANK', title: 'ICICI Bank' },
-        { proName: 'COMEX:GC1!', title: 'Gold' },
-        { proName: 'COMEX:SI1!', title: 'Silver' },
-        { proName: 'NYMEX:CL1!', title: 'Crude Oil' },
+        { proName: 'BITSTAMP:BTCUSD', title: 'Bitcoin' },
         { proName: 'FX_IDC:USDINR', title: 'USD/INR' },
-        { proName: 'CRYPTO:BTCUSD', title: 'Bitcoin' },
+        { proName: 'TVC:GOLD', title: 'Gold' },
+        { proName: 'TVC:SILVER', title: 'Silver' },
+        { proName: 'TVC:USOIL', title: 'Crude Oil' },
       ],
       showSymbolLogo: true,
-      isTransparent: true,
-      displayMode: 'regular',
-      colorTheme: 'dark',
+      isTransparent: false,
+      displayMode: 'adaptive',
+      colorTheme: isTop ? 'light' : 'dark',
       locale: 'en',
     });
 
     containerRef.current.appendChild(script);
-  }, []);
+  }, [variant, isTop]);
+
+  const wrapperStyle = isTop ? {
+    flex: 1,
+    height: '46px',
+    background: 'transparent',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    marginLeft: '2rem'
+  } : {
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: '46px',
+    background: 'rgba(4, 6, 12, 0.98)',
+    borderTop: '1px solid rgba(212, 175, 55, 0.2)',
+    zIndex: 1000,
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+  };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: '46px',
-        background: 'rgba(4, 6, 12, 0.98)',
-        borderTop: '1px solid rgba(212, 175, 55, 0.2)',
-        zIndex: 1000,
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      {/* LIVE badge */}
+    <div style={wrapperStyle}>
       <div style={{
         flexShrink: 0,
         background: '#ef4444',
         color: 'white',
-        fontSize: '0.65rem',
+        fontSize: '0.6rem',
         fontWeight: 900,
-        letterSpacing: '2px',
-        padding: '3px 9px',
+        letterSpacing: '1px',
+        padding: '2px 8px',
         borderRadius: '4px',
-        marginLeft: '12px',
+        marginLeft: isTop ? '0' : '12px',
         marginRight: '8px',
-        animation: 'liveFlash 1.5s ease-in-out infinite',
+        animation: 'liveFlash 2s ease-in-out infinite',
         whiteSpace: 'nowrap',
-      }}>LIVE</div>
+      }}>LIVE MARKETS</div>
 
-      {/* TradingView widget container */}
       <div
         ref={containerRef}
         className="tradingview-widget-container"
         style={{ flex: 1, height: '44px', overflow: 'hidden' }}
       >
         <div className="tradingview-widget-container__widget" style={{ height: '44px' }} />
-
       </div>
     </div>
   );

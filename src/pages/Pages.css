@@ -2,7 +2,7 @@
    PAGE WRAPPER — White + Sea Green Theme
    ============================================= */
 .page-wrapper {
-  padding-top: 160px;
+  padding-top: 110px;
   min-height: 100vh;
   padding-bottom: 100px;
   position: relative;
@@ -76,7 +76,7 @@
   html { font-size: 13px !important; }
   .page-title { font-size: 2rem; }
   .container { padding: 0 16px; }
-  .page-wrapper { padding-top: 100px; }
+  .page-wrapper { padding-top: 130px; }
 }
 
 /* =============================================
@@ -269,4 +269,30 @@
 .btn-gold-outline:hover {
   background: rgba(0, 109, 109, 0.08);
   border-color: #006D6D;
+}
+/* Institutional Row — Responsive Board Profiles */
+.institutional-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .institutional-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .institutional-row > div:first-child {
+    margin: 0 auto;
+  }
+  .institutional-row > div:last-child {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Grids Gap Adjustments */
+@media (max-width: 768px) {
+  .grid-3-cols, .grid-2-cols { gap: 1.5rem !important; }
 }
