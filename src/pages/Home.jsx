@@ -25,7 +25,7 @@ export default function Home() {
         {/* Top teal accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, transparent, #006D6D 30%, #008888 70%, transparent)', zIndex: 5 }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', paddingTop: '160px', paddingBottom: '80px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', paddingTop: '160px', paddingBottom: '110px' }}>
           <div className="hero-grid" style={{ display: 'grid', gap: '3rem', alignItems: 'center' }}>
 
             {/* ── Left: Headline + Tags + CTAs ── */}
@@ -62,17 +62,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* CTA Buttons */}
-              <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }} className="hero-ctas">
-                <a 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfB6D9GmKXral0rGxJCGn9kg-DPTPSokWHQ4XFcQAim4Afd0w/viewform?usp=send_form" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 32px', background: 'linear-gradient(135deg, #006D6D, #005858)', color: 'white', fontWeight: 800, borderRadius: '8px', textDecoration: 'none', fontSize: '1rem', boxShadow: '0 8px 28px rgba(0,109,109,0.3)', gap: '10px' }}
-                >
-                  Contact the Desk <Activity size={18} />
-                </a>
-              </div>
             </motion.div>
 
             {/* ── Right: Floating Staggered Cards ── */}
@@ -192,7 +181,7 @@ export default function Home() {
 
 
       {/* Excellence Delivered */}
-      <section className="container mt-16 mb-20 md:mb-24">
+      <section className="container" style={{ marginTop: '8rem', marginBottom: '8rem' }}>
         <motion.div 
            initial={{ opacity: 0, y: 50 }}
            whileInView={{ opacity: 1, y: 0 }}
@@ -220,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* Our Core Architecture */}
-      <section className="py-16 md:py-24">
+      <section style={{ padding: '8rem 0' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
             <h2 className="text-4xl md:text-5xl font-bold" style={{ color: '#011f1f', margin: '0 0 1.5rem 0' }}>Our Core <span style={{ color: '#006D6D' }}>Architecture</span></h2>
@@ -251,7 +240,7 @@ export default function Home() {
       </section>
 
       {/* The Intelligent Choice */}
-      <section className="container mb-24 md:mb-32">
+      <section className="container" style={{ marginTop: '8rem', marginBottom: '8rem' }}>
         <motion.div 
            initial={{ opacity: 0 }}
            whileInView={{ opacity: 1 }}
@@ -350,27 +339,6 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'flex-start' }}
             >
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfB6D9GmKXral0rGxJCGn9kg-DPTPSokWHQ4XFcQAim4Afd0w/viewform?usp=send_form" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={{ 
-                  width: '100%',
-                  maxWidth: '320px',
-                  textAlign: 'center',
-                  background: 'linear-gradient(135deg, #00afaf, #008080)', 
-                  color: 'white', 
-                  padding: '20px 40px', 
-                  borderRadius: '12px', 
-                  fontWeight: 800, 
-                  fontSize: '1.15rem', 
-                  textDecoration: 'none', 
-                  boxShadow: '0 10px 40px rgba(0, 175, 175, 0.3)',
-                  transition: 'transform 0.2s'
-                }}
-              >
-                Contact the Desk
-              </a>
               <a 
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdz3AZ5GNRgLTM8KxMwnXWxhDRs8OvrXKqPBGrRAMs-_mQtDg/viewform?usp=send_form" 
                 target="_blank" 
