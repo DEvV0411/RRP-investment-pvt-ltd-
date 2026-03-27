@@ -34,7 +34,7 @@ export default function Navbar() {
       <header className={`nav-brand-strip ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <Link to="/" className="nav-logo-link">
-            <img src="/Logo.png?v=3" alt="RRP Investments" className="logo-image" />
+            <img src="/logo.png?v=4" alt="RRP Investments" className="logo-image" />
           </Link>
 
           {/* Desktop links inside the same bar */}

@@ -85,7 +85,7 @@ export default function About() {
         </section>
 
         {/* Leadership — Vertical Formal List */}
-        <section className="mb-24">
+        <section className="mb-24 pt-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 className="section-title text-4xl">Board of Directors</h2>
             <p className="text-gray-400 mt-2">Guiding our strategic transition into automated capital markets.</p>
