@@ -10,7 +10,6 @@ import Payment from './pages/Payment';
 import AdminDashboard from './pages/AdminDashboard';
 import AmbientGlow from './components/ui/AmbientGlow';
 import ScrollToTop from './components/utils/ScrollToTop';
-import StockTicker from './components/ui/StockTicker';
 import AIChatbot from './components/ui/AIChatbot';
 import SEO from './components/utils/SEO';
 
@@ -36,7 +35,6 @@ function App() {
       <RouteSEO />
       <ScrollToTop />
       <AmbientGlow />
-      <StockTicker />
       <AIChatbot />
       <Routes>
       <Route path="/" element={<Layout />}>

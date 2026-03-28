@@ -28,21 +28,21 @@ export default function About() {
       role: "Director",
       initials: "RP",
       color: "#006D6D",
-      bio: "Strategically steering the firm's evolution into automated trading. With a master's-level focus on finance and analytics, she builds the disciplined governance framework that integrates machine learning and advanced Greek-based options strategies."
+      bio: "With over 15 years of experience, she provides strategic direction and oversight to the company’s evolving approach to algorithmic trading. With a strong foundation in finance and analytics, she focuses on building a disciplined, research-oriented framework that integrates equity investing (fundamental and technical), futures and options trading, and structured risk management practices.\n\nHer leadership emphasizes a balanced and well-governed transition toward data-driven and automated trading systems, incorporating techniques such as machine learning, advanced analytics, and options strategies involving Greeks. Alongside this, she ensures that equity research - both fundamental and technical - remains an integral part of strategy development, supported by prudent hedging frameworks. She is committed to fostering a culture of continuous learning and disciplined execution, aligned with the evolving dynamics of the markets."
     },
     {
       name: "Mr. Jiten Waghela",
-      role: "Director of Quant Research",
+      role: "Director",
       initials: "JW",
       color: "#006D6D",
-      bio: "Architecting the core trading models across Indian derivative markets. He translates complex market dynamics into systematic strategies using advanced time-series modeling to extract Alpha from volatility mispricing."
+      bio: "The Director of Quantitative Research is responsible for developing and refining the company’s trading models across equity, futures, and options markets. Bringing more than 15 years of experience, he focuses on translating market data into systematic and scalable trading strategies with statistical analysis and financial data modeling.\n\nHis work spans time series modeling, machine learning techniques, and technical indicators, alongside the development of options strategies driven by Greek exposures (Delta-neutral, Gamma-based, and volatility trading). He also integrates fundamental signals and macroeconomic indicators into quantitative frameworks to enhance decision-making. A key part of his role is conducting rigorous backtesting, scenario analysis, and risk-adjusted performance evaluation, ensuring that strategies remain robust across varying market conditions while maintaining effective hedging and drawdown control."
     },
     {
       name: "Queenjal Vira",
       role: "Director",
       initials: "QV",
       color: "#006D6D",
-      bio: "A trading veteran with over 15 years in Indian equity markets. Having served at firms like Religare and Greeksoft, she brings deep tactical insight and charting expertise, bridging quantitative models and real-world liquidity."
+      bio: "With over 15 plus years of experience in the stock market, I have worked with reputed firms such as Religare Securities, Greeksoft Technologies, Gajanand Stock Brokers, and Jainam Securities. I specialize in active trading using technical analysis and advanced charting tools. My approach combines deep market insight with data-driven strategies to deliver consistent results.\n\nThe Director of Technology leads the development of the company’s trading infrastructure and execution capabilities, enabling seamless deployment of equity, futures, and options-based strategies. She is responsible for building reliable systems that support real-time data processing, automated execution, and continuous monitoring of positions and risk.\n\nHer role includes integrating quantitative models into production environments, ensuring that execution systems are aligned with strategy requirements, including hedging mechanisms and real-time monitoring of exposures such as positions, margins, and option Greeks. She focuses on creating scalable, efficient, and robust platforms that allow the company to execute complex trading strategies with precision and control across NSE markets."
     }
   ];
 
@@ -85,7 +85,7 @@ export default function About() {
         </section>
 
         {/* Leadership — Vertical Formal List */}
-        <section className="mb-24 pt-16">
+        <section className="mb-24" style={{ paddingTop: '8rem' }}>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <h2 className="section-title text-4xl">Board of Directors</h2>
             <p className="text-gray-400 mt-2">Guiding our strategic transition into automated capital markets.</p>
@@ -109,7 +109,7 @@ export default function About() {
                       <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', margin: 0 }}>{leader.name}</h3>
                       <p style={{ color: '#008888', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px' }}>{leader.role}</p>
                     </div>
-                    <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1.05rem', margin: 0, fontWeight: 300 }}>{leader.bio}</p>
+                    <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1.05rem', margin: 0, fontWeight: 300, whiteSpace: 'pre-line' }}>{leader.bio}</p>
                   </div>
                 </div>
               </motion.div>

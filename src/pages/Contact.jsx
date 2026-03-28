@@ -9,10 +9,9 @@ export default function Contact() {
       <div className="container relative z-10">
 
         <div className="page-header mt-12 mb-16">
-
           <h1 className="page-title">Contact Our Desk</h1>
           <p className="page-subtitle max-w-3xl mx-auto" style={{ textAlign: 'center' }}>
-            Whether you&#39;re inquiring about partnerships, recruitment, or general corporate information — we&#39;re here to help.
+            Whether you're inquiring about partnerships, recruitment, or general corporate information — we're here to help.
           </p>
         </div>
 
@@ -20,13 +19,13 @@ export default function Contact() {
 
           {/* Left: Contact Details */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-            <div style={{ background: 'linear-gradient(160deg, #eaf4f4 0%, white 100%)', border: '1px solid rgba(0, 109, 109,0.15)', borderRadius: '16px', padding: '3.5rem', height: '100%', borderTop: '4px solid #006D6D', boxShadow: '0 4px 24px rgba(0, 109, 109,0.07)' }}>
-              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '2.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109,0.1)' }}>Headquarters</h2>
+            <div style={{ background: 'linear-gradient(160deg, #eaf4f4 0%, white 100%)', border: '1px solid rgba(0, 109, 109, 0.15)', borderRadius: '16px', padding: 'clamp(1.5rem, 5vw, 3.5rem)', height: '100%', borderTop: '4px solid #006D6D', boxShadow: '0 4px 24px rgba(0, 109, 109, 0.07)' }}>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '2.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109, 0.1)' }}>Headquarters</h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109,0.08)', border: '1px solid rgba(0, 109, 109,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109, 0.08)', border: '1px solid rgba(0, 109, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
                     <Building2 size={22} />
                   </div>
                   <div>
@@ -37,7 +36,7 @@ export default function Contact() {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109,0.08)', border: '1px solid rgba(0, 109, 109,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109, 0.08)', border: '1px solid rgba(0, 109, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
                     <Mail size={22} />
                   </div>
                   <div>
@@ -48,7 +47,7 @@ export default function Contact() {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109,0.08)', border: '1px solid rgba(0, 109, 109,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109, 0.08)', border: '1px solid rgba(0, 109, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
                     <Phone size={22} />
                   </div>
                   <div>
@@ -58,7 +57,7 @@ export default function Contact() {
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109,0.08)', border: '1px solid rgba(0, 109, 109,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109, 0.08)', border: '1px solid rgba(0, 109, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
                     <Clock size={22} />
                   </div>
                   <div>
@@ -67,15 +66,14 @@ export default function Contact() {
                     <p style={{ color: '#5a9090', fontSize: '0.85rem', marginTop: '0.2rem' }}>NSE / BSE Market Hours</p>
                   </div>
                 </div>
-
               </div>
             </div>
           </motion.div>
 
           {/* Right: Inquiry Form Replacement */}
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }}>
-            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 109, 109,0.12)', borderRadius: '16px', padding: '3.5rem', borderTop: '4px solid #006D6D', boxShadow: '0 4px 24px rgba(0, 109, 109,0.07)', textAlign: 'center' }}>
-              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109,0.1)' }}>Send an Inquiry</h2>
+            <div style={{ background: '#ffffff', border: '1px solid rgba(0, 109, 109, 0.12)', borderRadius: '16px', padding: 'clamp(1.5rem, 5vw, 3.5rem)', borderTop: '4px solid #006D6D', boxShadow: '0 4px 24px rgba(0, 109, 109, 0.07)', textAlign: 'center' }}>
+              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109, 0.1)' }}>Send an Inquiry</h2>
               
               <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
                 Please use our official inquiry form to reach out for partnerships, recruitment, or general information. Our team will review your message and respond within 1–2 business days.
@@ -85,15 +83,14 @@ export default function Contact() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfB6D9GmKXral0rGxJCGn9kg-DPTPSokWHQ4XFcQAim4Afd0w/viewform?usp=send_form" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '18px 40px', background: 'linear-gradient(135deg, #006D6D 0%, #005858 100%)', color: 'white', fontWeight: 800, fontSize: '1.2rem', borderRadius: '10px', border: 'none', cursor: 'pointer', boxShadow: '0 4px 16px rgba(0, 109, 109,0.3)', transition: 'transform 0.2s, box-shadow 0.2s', textDecoration: 'none', width: '100%', boxSizing: 'border-box' }}
-                onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(0, 109, 109,0.4)'; }}
-                onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 109, 109,0.3)'; }}
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', padding: '18px 40px', background: 'linear-gradient(135deg, #006D6D 0%, #005858 100%)', color: 'white', fontWeight: 800, fontSize: '1.2rem', borderRadius: '10px', border: 'none', cursor: 'pointer', boxShadow: '0 4px 16px rgba(0, 109, 109, 0.3)', transition: 'transform 0.2s, box-shadow 0.2s', textDecoration: 'none', width: '100%', boxSizing: 'border-box' }}
+                onMouseOver={e => { e.currentTarget.style.transform = 'scale(1.02)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(0, 109, 109, 0.4)'; }}
+                onMouseOut={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 109, 109, 0.3)'; }}
               >
                 Open Inquiry Form <ExternalLink size={22} />
               </a>
             </div>
           </motion.div>
-
         </div>
       </div>
     </div>

@@ -37,15 +37,14 @@ export default function Business() {
         
         {/* Header */}
         <div className="page-header mt-12">
-
           <h1 className="page-title">Market Strategy & Intelligence</h1>
-          <p className="page-subtitle max-w-5xl mx-auto" style={{ textAlign: 'center', lineHeight: 1.8, fontSize: '1.2rem', color: '#1a3a3a' }}>
+          <p className="page-subtitle max-w-5xl mx-auto" style={{ textAlign: 'center', lineHeight: 1.8, fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: '#1a3a3a' }}>
             The company operates as a technology-driven, research-oriented trading organization, integrating algorithmic models, AI/ML techniques, and data-driven systems with equity, futures, and options trading strategies. By combining fundamental and technical research, derivatives trading, and Greek-based risk management within a robust execution and infrastructure framework, the company aims to deliver systematic, disciplined, and adaptive trading solutions, with a strong focus on risk control, hedging, and consistent long-term performance in Indian financial markets.
           </p>
         </div>
 
         {/* Operations Grid */}
-        <div className="grid-2-cols" style={{ gap: '3rem', marginTop: '6rem', marginBottom: '8rem' }}>
+        <div className="grid-2-cols" style={{ gap: '2rem', marginTop: 'clamp(3rem, 8vw, 6rem)', marginBottom: 'clamp(4rem, 10vw, 8rem)' }}>
           {operations.map((op, idx) => (
             <motion.div
               key={idx}
@@ -54,12 +53,12 @@ export default function Business() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
             >
-              <div className="fin-card" style={{ height: '100%', borderTop: `4px solid ${op.accent}`, background: 'linear-gradient(160deg, #f0f8f8 0%, white 100%)', padding: '3rem' }}>
-                <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: `${op.accent}12`, border: `1px solid ${op.accent}30`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: op.accent, marginBottom: '2rem' }}>
+              <div className="fin-card" style={{ height: '100%', borderTop: `4px solid ${op.accent}`, background: 'linear-gradient(160deg, #f0f8f8 0%, white 100%)', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
+                <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${op.accent}12`, border: `1px solid ${op.accent}30`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: op.accent, marginBottom: '2rem' }}>
                   {op.icon}
                 </div>
-                <h3 style={{ fontSize: '1.6rem', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', lineHeight: 1.3 }}>{op.title}</h3>
-                <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1.05rem', borderLeft: `4px solid ${op.accent}25`, paddingLeft: '1.5rem' }}>{op.desc}</p>
+                <h3 style={{ fontSize: 'clamp(1.3rem, 4vw, 1.6rem)', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', lineHeight: 1.3 }}>{op.title}</h3>
+                <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1rem', borderLeft: `4px solid ${op.accent}25`, paddingLeft: '1.5rem' }}>{op.desc}</p>
               </div>
             </motion.div>
           ))}
