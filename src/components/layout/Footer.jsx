@@ -38,7 +38,7 @@ export default function Footer() {
             </li>
             <li>
               <Phone size={18} className="contact-icon" style={{ flexShrink: 0, marginTop: '4px' }}/>
-              <a href="tel:"></a>
+              <a href="tel:+919999999999">+91 99999 99999</a>
             </li>
           </ul>
         </div>

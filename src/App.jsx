@@ -8,6 +8,8 @@ import Internships from './pages/Internships';
 import Contact from './pages/Contact';
 import Payment from './pages/Payment';
 import AdminDashboard from './pages/AdminDashboard';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 import AmbientGlow from './components/ui/AmbientGlow';
 import ScrollToTop from './components/utils/ScrollToTop';
 import AIChatbot from './components/ui/AIChatbot';
@@ -23,7 +25,9 @@ const RouteSEO = () => {
       '/internships': { title: "Internships | RRP Investments", description: "Apply for a rigorous internship in algorithmic trading." },
       '/contact': { title: "Contact | RRP Investments", description: "Get in touch for general inquiries or institutional partnerships." },
       '/payment': { title: "Secure Payments | RRP Investments", description: "Process your transactions securely." },
-      '/admin': { title: "Executive Dashboard | RRP", description: "Secure administrative portal." }
+      '/admin': { title: "Executive Dashboard | RRP", description: "Secure administrative portal." },
+      '/privacy': { title: "Privacy Policy | RRP Investments", description: "Learn about how we protect your data." },
+      '/terms': { title: "Terms of Service | RRP Investments", description: "Legal terms for using our platform." }
   };
   const currentSeo = seoData[location.pathname] || seoData['/'];
   return <SEO {...currentSeo} />;
@@ -46,6 +50,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="payment" element={<Payment />} />
         <Route path="admin" element={<AdminDashboard />} />
+        <Route path="privacy" element={<PrivacyPolicy />} />
+        <Route path="terms" element={<TermsOfService />} />
       </Route>
     </Routes>
     </>
