@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Network, Activity, PieChart, Layers } from 'lucide-react';
+import { Network, Activity, PieChart, Layers, Briefcase } from 'lucide-react';
 import './Pages.css';
 
 export default function Business() {
@@ -28,6 +28,12 @@ export default function Business() {
       icon: <PieChart size={28} />,
       accent: "#006D6D",
       desc: "Risk management is embedded across all activities through real-time monitoring of positions, strict exposure limits, drawdown controls, margin optimization, and dynamic hedging techniques. The company operates on a strong technological backbone that supports real-time data processing, automated execution, and scalable trading systems, ensuring precision, reliability, and efficiency in execution."
+    },
+    {
+      title: "Private Equity",
+      icon: <Briefcase size={28} />,
+      accent: "#006D6D",
+      desc: "We offer strategic investment solutions tailored for companies seeking to unlock value and accelerate growth through capital market opportunities. Our expertise spans Initial Public Offerings (IPOs), reverse mergers, and structured instruments such as preference shares.\n\nEach opportunity is carefully evaluated and designed with a focus on delivering superior risk-adjusted returns. By leveraging in-depth market insights, rigorous due diligence, and innovative structuring, we aim to consistently outperform broader market benchmarks.\n\nOur approach combines strategic advisory with disciplined execution, enabling businesses to access capital efficiently while creating meaningful value for investors."
     }
   ];
 
@@ -52,13 +58,14 @@ export default function Business() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
+              style={idx === operations.length - 1 && operations.length % 2 !== 0 ? { gridColumn: '1 / -1' } : {}}
             >
               <div className="fin-card" style={{ height: '100%', borderTop: `4px solid ${op.accent}`, background: 'linear-gradient(160deg, #f0f8f8 0%, white 100%)', padding: 'clamp(1.5rem, 5vw, 3rem)' }}>
                 <div style={{ width: '56px', height: '56px', borderRadius: '16px', background: `${op.accent}12`, border: `1px solid ${op.accent}30`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: op.accent, marginBottom: '2rem' }}>
                   {op.icon}
                 </div>
                 <h3 style={{ fontSize: 'clamp(1.3rem, 4vw, 1.6rem)', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', lineHeight: 1.3 }}>{op.title}</h3>
-                <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1rem', borderLeft: `4px solid ${op.accent}25`, paddingLeft: '1.5rem' }}>{op.desc}</p>
+                <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1rem', borderLeft: `4px solid ${op.accent}25`, paddingLeft: '1.5rem', whiteSpace: 'pre-line' }}>{op.desc}</p>
               </div>
             </motion.div>
           ))}

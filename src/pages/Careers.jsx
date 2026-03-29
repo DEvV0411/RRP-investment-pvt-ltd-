@@ -51,7 +51,7 @@ export default function Careers() {
       icon: <Code size={24} />,
       overview: "The Software Developer will design and maintain the company’s algorithmic trading infrastructure, including data pipelines, execution systems, and model deployment frameworks. The role focuses on building scalable, reliable, and efficient systems for real-time trading.",
       responsibilities: [
-        "Develop and maintain low-latency trading systems and execution engines",
+        "Develop and maintain high-performance institutional trading systems and execution engines",
         "Build real-time data ingestion and processing pipelines",
         "Integrate quantitative models into production environments",
         "Design systems for order management, risk monitoring, and reporting",
@@ -63,7 +63,7 @@ export default function Careers() {
         "Strong programming skills in Python, C++, or Java",
         "Experience with APIs, databases, and distributed systems",
         "Understanding of financial markets and trading workflows (preferred)",
-        "Knowledge of low-latency systems and real-time processing",
+        "Knowledge of high-performance systems and real-time processing",
         "Familiarity with cloud platforms and scalable architectures"
       ]
     }

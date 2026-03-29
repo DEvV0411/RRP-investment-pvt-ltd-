@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Shield, Zap, Target } from 'lucide-react';
+import { Shield, TrendingUp, Target } from 'lucide-react';
 import './Pages.css';
 
 export default function About() {
@@ -11,9 +11,9 @@ export default function About() {
       desc: "Directional engagement anchored in rigorous statistical modeling and exhaustive backtesting across multi-cycle historical datasets."
     },
     {
-      icon: Zap,
-      title: "Technological Edge",
-      desc: "Low-latency execution pipelines built on high-performance compute architectures for sub-millisecond market entry."
+      icon: TrendingUp,
+      title: "Private Capital",
+      desc: "Identifying and nurturing high-potential enterprises through strategic equity investments and institutional-grade operational support."
     },
     {
       icon: Shield,
@@ -38,11 +38,11 @@ export default function About() {
       bio: "The Director of Quantitative Research is responsible for developing and refining the company’s trading models across equity, futures, and options markets. Bringing more than 15 years of experience, he focuses on translating market data into systematic and scalable trading strategies with statistical analysis and financial data modeling.\n\nHis work spans time series modeling, machine learning techniques, and technical indicators, alongside the development of options strategies driven by Greek exposures (Delta-neutral, Gamma-based, and volatility trading). He also integrates fundamental signals and macroeconomic indicators into quantitative frameworks to enhance decision-making. A key part of his role is conducting rigorous backtesting, scenario analysis, and risk-adjusted performance evaluation, ensuring that strategies remain robust across varying market conditions while maintaining effective hedging and drawdown control."
     },
     {
-      name: "Queenjal Vira",
+      name: "Mrs. Queenjal Vira",
       role: "Director",
       initials: "QV",
       color: "#006D6D",
-      bio: "With over 15 plus years of experience in the stock market, I have worked with reputed firms such as Religare Securities, Greeksoft Technologies, Gajanand Stock Brokers, and Jainam Securities. I specialize in active trading using technical analysis and advanced charting tools. My approach combines deep market insight with data-driven strategies to deliver consistent results.\n\nThe Director of Technology leads the development of the company’s trading infrastructure and execution capabilities, enabling seamless deployment of equity, futures, and options-based strategies. She is responsible for building reliable systems that support real-time data processing, automated execution, and continuous monitoring of positions and risk.\n\nHer role includes integrating quantitative models into production environments, ensuring that execution systems are aligned with strategy requirements, including hedging mechanisms and real-time monitoring of exposures such as positions, margins, and option Greeks. She focuses on creating scalable, efficient, and robust platforms that allow the company to execute complex trading strategies with precision and control across NSE markets."
+      bio: "With over 15 years of experience in the stock market, she has worked with reputed firms such as Religare Securities, Greeksoft Technologies, Gajanand Stock Brokers, and Jainam Securities. She specializes in active trading using technical analysis and advanced charting tools. Her approach combines deep market insight with data-driven strategies to deliver consistent results.\n\nThe Director of Technology leads the development of the company’s trading infrastructure and execution capabilities, enabling seamless deployment of equity, futures, and options-based strategies. She is responsible for building reliable systems that support real-time data processing, automated execution, and continuous monitoring of positions and risk.\n\nHer role includes integrating quantitative models into production environments, ensuring that execution systems are aligned with strategy requirements, including hedging mechanisms and real-time monitoring of exposures such as positions, margins, and option Greeks. She focuses on creating scalable, efficient, and robust platforms that allow the company to execute complex trading strategies with precision and control across NSE markets."
     }
   ];
 
@@ -60,6 +60,26 @@ export default function About() {
               RRP Investments is a technology-driven, research-oriented trading organization. We combine systematic algorithmic intelligence with deep market expertise to deliver sustainable performance.
             </p>
           </motion.div>
+        </section>
+
+        {/* Vision, Mission, Who We Are */}
+        <section className="mb-24 py-12" style={{ background: 'linear-gradient(180deg, rgba(240,252,252,0) 0%, rgba(234,244,244,0.6) 100%)', borderRadius: '24px', padding: '4rem 2rem' }}>
+          <div className="grid-3-cols" style={{ gap: '3rem' }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Vision</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>To enable people to contribute to and share wealth of a nation through high professional excellence in capital markets.</p>
+            </motion.div>
+            
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Mission</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>To provide unparalleled service with integrity to our clients to create value.</p>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Who We Are</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>We are a group of highly experienced professionals who strive to create value through our expertise in capital markets.</p>
+            </motion.div>
+          </div>
         </section>
 
         {/* Methodology Strip — Clean and Open */}

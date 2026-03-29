@@ -16,7 +16,7 @@ import SEO from './components/utils/SEO';
 const RouteSEO = () => {
   const location = useLocation();
   const seoData = {
-      '/': { title: "RRP Investments | Algorithmic Trading", description: "RRP Investments Private Limited is a premier quantitative trading firm based in Mumbai." },
+      '/': { title: "RRP Investments | Quantitative Trading & Investments", description: "RRP Investments Private Limited is a premier quantitative trading and investment firm based in Mumbai." },
       '/about': { title: "About Us | RRP Investments", description: "Learn about the mission, philosophy, and quantitative technology powering RRP Investments." },
       '/business': { title: "Our Business | RRP Investments", description: "Explore our sophisticated algorithmic trading services." },
       '/careers': { title: "Careers | RRP Investments", description: "Join our team of elite quantitative analysts and software engineers in Mumbai." },

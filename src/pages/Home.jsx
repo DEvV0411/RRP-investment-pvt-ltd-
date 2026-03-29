@@ -38,7 +38,7 @@ export default function Home() {
               {/* Label pill */}
               <div className="hero-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '999px', background: 'rgba(0,109,109,0.08)', border: '1px solid rgba(0,109,109,0.2)', marginBottom: '2rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#006D6D', display: 'inline-block', boxShadow: '0 0 8px rgba(0,109,109,0.6)' }} />
-                <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Quantitative Trading Firm · Mumbai</span>
+                <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Quantitative Trading and Investment Firm</span>
               </div>
 
               <h1 className="hero-title" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.5rem)', fontWeight: 900, color: '#011f1f', lineHeight: 1.08, margin: '0 0 0.4rem', letterSpacing: '-1.5px' }}>
@@ -55,7 +55,7 @@ export default function Home() {
 
               {/* Domain tags */}
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '2.5rem' }} className="hero-tags">
-                {['Algo Trading', 'Machine Learning', 'Quant Finance', 'Low Latency'].map((tag, i) => (
+                {['Algo Trading', 'Machine Learning', 'Quant Finance', 'Private Equity'].map((tag, i) => (
                   <div key={i} style={{ padding: '6px 16px', borderRadius: '6px', background: 'white', border: '1px solid rgba(0,109,109,0.2)', boxShadow: '0 2px 8px rgba(0,109,109,0.06)' }}>
                     <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>{tag}</span>
                   </div>
@@ -150,7 +150,7 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.7 }}
                 style={{ position: 'absolute', bottom: '0px', left: '40px', right: '0px', background: 'linear-gradient(135deg, #eaf4f4 0%, #f0f9f9 100%)', borderRadius: '16px', padding: '1.3rem 1.6rem', boxShadow: '0 4px 20px rgba(0,109,109,0.1)', border: '1px solid rgba(0,109,109,0.12)', display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'space-around' }}
               >
-                {[{ val: '100%', label: 'Research' }, { val: '< 1ms', label: 'Latency' }, { val: 'Multi', label: 'Asset' }].map((stat, i) => (
+                {[{ val: '100%', label: 'Research' }, { val: 'PE', label: 'Private Equity' }, { val: 'Multi', label: 'Asset' }].map((stat, i) => (
                   <div key={i} style={{ textAlign: 'center' }}>
                     <p style={{ color: '#006D6D', fontSize: '1.3rem', fontWeight: 900, margin: 0, lineHeight: 1 }}>{stat.val}</p>
                     <p style={{ color: '#5a9090', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', margin: '4px 0 0' }}>{stat.label}</p>
@@ -221,7 +221,7 @@ export default function Home() {
           <div className="grid-2-cols">
             {[
               { icon: BarChart2, title: "Systematic Trading", desc: "Fully funded, high-performance trading capitalizing on market inefficiencies through data-driven, model-based execution.", color: '#006D6D' },
-              { icon: Activity, title: "Algorithmic Scalping", desc: "Intraday liquidity-based trading focusing on high-volume markets to extract value from bid-ask spreads.", color: '#006D6D' },
+              { icon: Activity, title: "Equity Investment & Quant Research", desc: "Fundamental and quantitative research-driven equity investments targeting long-term value creation and sustainable growth.", color: '#006D6D' },
               { icon: ShieldCheck, title: "Options & Greeks", desc: "Executing advanced volatility strategies and Greek-based risk management to capture premium decay and capitalize on market mispricing.", color: '#006D6D' },
               { icon: Globe, title: "Risk & Hedging", desc: "Integrating dynamic hedging techniques and real-time portfolio-level risk controls to mitigate exposure and ensure systematic capital preservation.", color: '#006D6D' }
             ].map((pillar, idx) => (
@@ -267,12 +267,11 @@ export default function Home() {
 
                   <div className="home-choice-mid" style={{ textAlign: 'center', padding: '0 1rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', height: '80px' }}>
-                      <span style={{ fontSize: '2.5rem', color: '#006D6D', fontWeight: 'bold', marginRight: '8px' }}>&lt;</span>
-                      <span style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 'bold', color: '#011f1f', lineHeight: 1 }}><AnimatedCounter end={1} prefix="" suffix="" /></span>
-                      <span style={{ fontSize: '1.8rem', color: '#006D6D', fontWeight: 'bold', marginLeft: '5px' }}>ms</span>
+                      <span style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 'bold', color: '#011f1f', lineHeight: 1 }}><AnimatedCounter end={15} prefix="" suffix="+" /></span>
+                      <span style={{ fontSize: '1.8rem', color: '#006D6D', fontWeight: 'bold', marginLeft: '5px' }}>Years</span>
                     </div>
-                    <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#011f1f', margin: '0 0 1rem 0', textTransform: 'uppercase', letterSpacing: '2px' }}>Ultra-Low Latency</h4>
-                    <p style={{ color: '#2d5c5c', lineHeight: 1.6, fontSize: '0.95rem', margin: 0 }}>Technological edge delivering sub-millisecond execution speeds across all major Indian exchanges.</p>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#011f1f', margin: '0 0 1rem 0', textTransform: 'uppercase', letterSpacing: '2px' }}>Private Equity</h4>
+                    <p style={{ color: '#2d5c5c', lineHeight: 1.6, fontSize: '0.95rem', margin: 0 }}>Strategic capital allocation across high-potential private markets, focusing on long-term value creation.</p>
                   </div>
 
                   <div style={{ textAlign: 'center' }}>

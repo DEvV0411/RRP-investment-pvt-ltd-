@@ -1,6 +1,5 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { CheckCircle2, BrainCircuit, Laptop, Target, Rocket } from 'lucide-react';
+import { CheckCircle2, BrainCircuit, Laptop, Target, Rocket, Star } from 'lucide-react';
 import './Pages.css';
 
 export default function Internships() {
@@ -21,6 +20,11 @@ export default function Internships() {
         "Basic understanding of equity markets",
         "Interest in financial analysis",
         "Familiarity with Excel / basic data tools"
+      ],
+      benefits: [
+        "Certificate of Internship",
+        "Exposure to real datasets for model building / technical analysis",
+        "Hand-holding for research and trading in your own account"
       ]
     },
     {
@@ -39,6 +43,11 @@ export default function Internships() {
         "Basic understanding of derivatives markets",
         "Interest in options trading and strategies",
         "Analytical mindset"
+      ],
+      benefits: [
+        "Certificate of Internship",
+        "Exposure to real datasets, valuation models and strategies",
+        "Hand-holding for research and trading in your own account"
       ]
     },
     {
@@ -57,6 +66,11 @@ export default function Internships() {
         "Basic knowledge of statistics and financial markets",
         "Familiarity with Python (preferred but not mandatory)",
         "Strong problem-solving ability"
+      ],
+      benefits: [
+        "Certificate of Internship",
+        "Exposure to real datasets for quant research",
+        "Hand-holding for research and trading in your own account"
       ]
     },
     {
@@ -75,6 +89,11 @@ export default function Internships() {
         "Strong communication and interpersonal skills",
         "Basic understanding of financial markets (preferred)",
         "Interest in business development and client interaction"
+      ],
+      benefits: [
+        "Certificate of Internship",
+        "Exposure to real-time Behavioral Finance",
+        "Hand-holding for research and trading in your own account"
       ]
     }
   ];
@@ -83,7 +102,6 @@ export default function Internships() {
     <div className="page-wrapper pb-24">
       <div className="container relative z-10">
         <div className="page-header mt-12 mb-16">
-
           <h1 className="page-title">Structured Internships</h1>
           <p className="page-subtitle max-w-4xl mx-auto mb-8" style={{ textAlign: 'center', lineHeight: 1.8 }}>
             Gaining practical exposure through an internship is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles.
@@ -141,19 +159,35 @@ export default function Internships() {
                       </ul>
                     </div>
 
-                    {/* Right Column: Requirements */}
-                    <div>
-                       <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#011f1f', marginBottom: '1.2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                          Skills Required
-                       </h3>
-                       <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
-                         {internship.skills.map((req, ridx) => (
-                            <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
-                               <CheckCircle2 size={18} style={{ color: internship.color, flexShrink: 0, marginTop: '2px' }} />
-                               <span style={{ lineHeight: 1.6, fontSize: '1rem' }}>{req}</span>
-                            </li>
-                         ))}
-                       </ul>
+                    {/* Right Column: Requirements & Benefits */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                       <div>
+                         <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#011f1f', marginBottom: '1.2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                            Skills Required
+                         </h3>
+                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
+                           {internship.skills.map((req, ridx) => (
+                              <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
+                                 <CheckCircle2 size={18} style={{ color: internship.color, flexShrink: 0, marginTop: '2px' }} />
+                                 <span style={{ lineHeight: 1.6, fontSize: '1rem' }}>{req}</span>
+                              </li>
+                           ))}
+                         </ul>
+                       </div>
+                       
+                       <div>
+                         <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#011f1f', marginBottom: '1.2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                            Candidate Benefits
+                         </h3>
+                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
+                           {internship.benefits.map((benefit, bidx) => (
+                              <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
+                                 <Star size={18} style={{ color: "#d4af37", fill: "#d4af37", flexShrink: 0, marginTop: '2px' }} />
+                                 <span style={{ lineHeight: 1.6, fontSize: '1rem', fontWeight: 600 }}>{benefit}</span>
+                              </li>
+                           ))}
+                         </ul>
+                       </div>
                     </div>
                     
                   </div>
