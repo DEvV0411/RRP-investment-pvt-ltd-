@@ -111,29 +111,70 @@ export default function About() {
             <p className="text-gray-400 mt-2">Guiding our strategic transition into automated capital markets.</p>
           </motion.div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
-            {leadership.map((leader, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i }}
-              >
-                <div className="institutional-row">
-                  <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: '#f0fcfc', border: '1px solid rgba(0, 109, 109, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <span style={{ color: '#006D6D', fontSize: '1.8rem', fontWeight: 900 }}>{leader.initials}</span>
-                  </div>
-                  <div style={{ borderBottom: '1px solid rgba(0, 109, 109, 0.08)', paddingBottom: '3rem' }}>
-                    <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-2">
-                      <h3 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', margin: 0 }}>{leader.name}</h3>
-                      <p style={{ color: '#008888', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '2px' }}>{leader.role}</p>
+          {/* Institutional Management Table */}
+          <div className="management-table-wrapper">
+            <div className="management-table-header">
+              <div className="th-profile">Executive Profile</div>
+              <div className="th-bio">Professional Biography</div>
+              <div className="th-mandate">Strategic Mandate</div>
+            </div>
+            
+            <div className="management-table-body">
+              {leadership.map((leader, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i }}
+                  className="management-row"
+                >
+                  <div className="td-profile">
+                    <div className="leader-avatar">
+                      <span>{leader.initials}</span>
                     </div>
-                    <p style={{ color: '#2d5c5c', lineHeight: 1.9, fontSize: '1.05rem', margin: 0, fontWeight: 300, whiteSpace: 'pre-line' }}>{leader.bio}</p>
+                    <div className="leader-info">
+                      <h3 className="leader-name">{leader.name}</h3>
+                      <p className="leader-role">{leader.role}</p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="td-bio">
+                    <p>{leader.bio.split('\n\n')[0]}</p>
+                    {leader.bio.split('\n\n').slice(1).map((para, pidx) => (
+                      <p key={pidx} style={{ marginTop: '1rem' }}>{para}</p>
+                    ))}
+                  </div>
+                  <div className="td-mandate">
+                    <div className="mandate-tag">
+                      {i === 0 ? 'Corporate Governance' : i === 1 ? 'Quant Strategy' : 'Technology Infrastructure'}
+                    </div>
+                    <ul className="mandate-list">
+                      {i === 0 && (
+                        <>
+                          <li>Strategic Oversight</li>
+                          <li>Risk Frameworks</li>
+                          <li>Ethical Compliance</li>
+                        </>
+                      )}
+                      {i === 1 && (
+                        <>
+                          <li>Alpha Generation</li>
+                          <li>Systematic Models</li>
+                          <li>Backtesting Rigor</li>
+                        </>
+                      )}
+                      {i === 2 && (
+                        <>
+                          <li>Execution Systems</li>
+                          <li>Real-time Monitoring</li>
+                          <li>Scalable Platforms</li>
+                        </>
+                      )}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
