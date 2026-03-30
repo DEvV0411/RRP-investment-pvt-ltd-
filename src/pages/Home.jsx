@@ -166,13 +166,18 @@ export default function Home() {
         <style>{`
           .hero-grid { grid-template-columns: 1fr 1fr; }
           @media (max-width: 1024px) {
-            .hero-grid { grid-template-columns: 1fr !important; text-align: center; }
+            .hero-grid { grid-template-columns: 1fr !important; text-align: center; padding-top: 40px; }
             .hero-content { display: flex; flex-direction: column; align-items: center; }
-            .hero-desc { margin-left: auto; margin-right: auto; }
+            .hero-desc { margin-left: auto; margin-right: auto; text-align: center; }
+            .hero-title { font-size: 3.2rem !important; }
             .hero-tags, .hero-ctas { justify-content: center; }
-            .hero-tagline { border-left: none !important; padding-left: 0 !important; }
+            .hero-tagline { border-left: none !important; padding-left: 0 !important; text-align: center; }
             .hero-cards { display: none !important; }
             .home-stat-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 480px) {
+            .hero-title { font-size: 2.5rem !important; }
+            .hero-pill { transform: scale(0.9); }
           }
         `}</style>
       </section>

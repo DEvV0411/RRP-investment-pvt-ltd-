@@ -186,6 +186,8 @@
 }
 
 @media (max-width: 500px) {
-  .logo-image { height: 52px; }
-  .mobile-drawer { right: 1rem; width: calc(100vw - 2rem); }
+  .logo-image { height: 48px; }
+  .nav-brand-strip { padding: 0.5rem 0; }
+  .mobile-drawer { right: 1rem; width: calc(100vw - 2rem); margin-top: 0.5rem; }
+  .pill-menu-btn { padding: 0.4rem 0.7rem; font-size: 0.85rem; }
 }

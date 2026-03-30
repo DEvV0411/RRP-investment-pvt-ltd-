@@ -101,12 +101,34 @@ export default function Internships() {
   return (
     <div className="page-wrapper pb-24">
       <div className="container relative z-10">
-        <div className="page-header mt-12 mb-16">
-          <h1 className="page-title">Structured Internships</h1>
-          <p className="page-subtitle max-w-4xl mx-auto mb-8" style={{ textAlign: 'center', lineHeight: 1.8 }}>
-            Gaining practical exposure through an internship is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles.
-          </p>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="fin-card overflow-hidden mb-16"
+          style={{ padding: 0, marginTop: '2rem' }}
+        >
+          <div className="grid-2-cols" style={{ gap: 0 }}>
+            {/* Left Content */}
+            <div style={{ padding: 'clamp(2rem, 5vw, 4rem)' }}>
+              <div style={{ color: '#006D6D', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Structured Programs</div>
+              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Professional <br/><span style={{ color: '#006D6D' }}>Internships.</span></h1>
+              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: 0 }}>
+                Gaining practical exposure through an internship is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles.
+              </p>
+            </div>
+
+            {/* Right Image Container */}
+            <div style={{ position: 'relative', width: '100%', minHeight: '320px', background: '#011f1f' }}>
+               <img 
+                 src="/hero-trading.png" 
+                 alt="Professional Trading Environment" 
+                 style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }} 
+               />
+               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 0%, rgba(1, 31, 31, 0.4) 100%)' }}></div>
+            </div>
+          </div>
+        </motion.div>
 
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <a

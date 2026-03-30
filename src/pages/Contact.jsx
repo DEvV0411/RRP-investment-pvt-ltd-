@@ -52,7 +52,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Direct Lines</p>
-                    <a href="tel:+919999999999" style={{ color: '#2d5c5c', textDecoration: 'none', fontWeight: 500, fontSize: '1rem' }}>+91 99999 99999</a>
+                    <a href="tel:+919821724589" style={{ color: '#2d5c5c', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem' }}>+91 98217 24589</a>
+                    <p style={{ color: '#5a9090', fontSize: '0.85rem', marginTop: '0.3rem' }}>Availability: After 3:30 PM IST (Mon-Fri)</p>
                   </div>
                 </div>
 

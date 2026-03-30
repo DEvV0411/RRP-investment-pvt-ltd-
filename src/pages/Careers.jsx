@@ -73,28 +73,34 @@ export default function Careers() {
 
   return (
     <div className="page-wrapper pb-16">
-      <div className="page-header mt-8">
-        <div className="container text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="fin-card overflow-hidden"
+          style={{ padding: 0, marginTop: '2rem' }}
+        >
+          <div className="grid-2-cols" style={{ gap: 0 }}>
+            {/* Left Content */}
+            <div style={{ padding: 'clamp(2rem, 5vw, 4rem)' }}>
+              <div style={{ color: '#006D6D', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Join the Desk</div>
+              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Careers at <br/><span style={{ color: '#006D6D' }}>RRP Investments.</span></h1>
+              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: 0 }}>
+                {whyWorkWithUs}
+              </p>
+            </div>
 
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="page-title text-5xl mb-6"
-          >
-            Careers at RRP
-          </motion.h1>
-          <div className="title-underline center"></div>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="page-subtitle max-w-4xl mx-auto text-lg leading-relaxed text-gray-300 mb-8"
-          >
-            {whyWorkWithUs}
-          </motion.p>
-        </div>
-      </div>
+            {/* Right Image Container */}
+            <div style={{ position: 'relative', width: '100%', minHeight: '320px', background: '#011f1f' }}>
+               <img 
+                 src="/algo-network.png" 
+                 alt="Quantitative Intelligence" 
+                 style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }} 
+               />
+               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 0%, rgba(1, 31, 31, 0.4) 100%)' }}></div>
+            </div>
+          </div>
+        </motion.div>
 
       <div className="container mt-12">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>

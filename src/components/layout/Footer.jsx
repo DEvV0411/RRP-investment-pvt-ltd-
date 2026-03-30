@@ -38,7 +38,10 @@ export default function Footer() {
             </li>
             <li>
               <Phone size={18} className="contact-icon" style={{ flexShrink: 0, marginTop: '4px' }}/>
-              <a href="tel:+919999999999">+91 99999 99999</a>
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <a href="tel:+919821724589" style={{ color: 'inherit', textDecoration: 'none' }}>+91 98217 24589</a>
+                <span style={{ fontSize: '0.75rem', color: '#5a9090', marginTop: '2px' }}>(After 3:30 PM IST)</span>
+              </div>
             </li>
           </ul>
         </div>
