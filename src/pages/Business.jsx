@@ -27,13 +27,7 @@ export default function Business() {
       title: "Private Equity",
       icon: <Briefcase size={28} />,
       accent: "#006D6D",
-      desc: "We offer strategic investment solutions tailored for companies seeking to unlock value and accelerate growth through capital market opportunities. Our expertise spans Initial Public Offerings (IPOs), reverse mergers, and structured instruments such as preference shares.\n\nEach opportunity is carefully evaluated and designed with a focus on delivering superior risk-adjusted returns. By leveraging in-depth market insights, rigorous due diligence, and innovative structuring, we aim to consistently outperform broader market benchmarks.\n\nOur approach combines strategic advisory with disciplined execution, enabling businesses to access capital efficiently while creating meaningful value for investors."
-    },
-    {
-      title: "Risk Management, Hedging & Execution Infrastructure",
-      icon: <PieChart size={28} />,
-      accent: "#006D6D",
-      desc: "Risk management is embedded across all activities through real-time monitoring of positions, strict exposure limits, drawdown controls, margin optimization, and dynamic hedging techniques. The company operates on a strong technological backbone that supports real-time data processing, automated execution, and scalable trading systems, ensuring precision, reliability, and efficiency in execution."
+      desc: "We offer strategic investment solutions tailored for companies seeking to unlock value and accelerate growth through capital market opportunities. Our expertise spans Initial Public Offerings (IPOs), reverse mergers, and structured instruments such as preference shares. Each opportunity is carefully evaluated and designed with a focus on delivering superior risk-adjusted returns. By leveraging in-depth market insights, rigorous due diligence, and innovative structuring, we aim to consistently outperform broader market benchmarks. Our approach combines strategic advisory with disciplined execution, enabling businesses to access capital efficiently while creating meaningful value for investors."
     }
   ];
 

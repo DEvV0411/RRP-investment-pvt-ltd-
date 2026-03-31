@@ -28,12 +28,13 @@ export default function Home() {
         <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', paddingTop: '160px', paddingBottom: '110px' }}>
           <div className="hero-grid" style={{ display: 'grid', gap: '3rem', alignItems: 'center' }}>
 
-            {/* ── Left: Headline + Tags + CTAs ── */}
+            {/* ── Headline + Tags + CTAs (Centrally Aligned) ── */}
             <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: 'easeOut' }}
               className="hero-content"
+              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%', maxWidth: '900px', margin: '0 auto' }}
             >
               {/* Label pill */}
               <div className="hero-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '999px', background: 'rgba(0,109,109,0.08)', border: '1px solid rgba(0,109,109,0.2)', marginBottom: '2rem' }}>
@@ -41,21 +42,24 @@ export default function Home() {
                 <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Quantitative Trading and Investment Firm</span>
               </div>
 
-              <h1 className="hero-title" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.5rem)', fontWeight: 900, color: '#011f1f', lineHeight: 1.08, margin: '0 0 0.4rem', letterSpacing: '-1.5px' }}>
+              <h1 className="hero-title" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.8rem)', fontWeight: 900, color: '#006D6D', lineHeight: 1.08, margin: '0 0 1.2rem', letterSpacing: '-1.5px' }}>
                 RRP<br/>
-                <span style={{ color: '#006D6D' }}>Investments</span>
+                Investments
               </h1>
-              <p style={{ color: '#006D6D', fontWeight: 700, fontSize: '1.2rem', letterSpacing: '2px', textTransform: 'uppercase', margin: '0 0 1.8rem', borderLeft: '3px solid #006D6D', paddingLeft: '12px' }} className="hero-tagline">
+              
+              <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', margin: '0 0 2rem', padding: '0 10px', display: 'flex', alignItems: 'center', gap: '15px' }} className="hero-tagline">
+                <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
                 Intelligence delivered.
+                <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
               </p>
 
-              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.75, marginBottom: '2.5rem', maxWidth: '480px' }} className="hero-desc">
+              <p style={{ color: '#2d5c5c', fontSize: '1.15rem', lineHeight: 1.8, marginBottom: '2.5rem', maxWidth: '650px' }} className="hero-desc">
                 A technology-driven, research-oriented trading organization integrating algorithmic models, AI/ML, and disciplined risk management in Indian financial markets.
               </p>
 
               {/* Domain tags */}
-              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '2.5rem' }} className="hero-tags">
-                {['Algo Trading', 'Machine Learning', 'Quant Finance', 'Private Equity'].map((tag, i) => (
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '2.5rem', justifyContent: 'center' }} className="hero-tags">
+                {['Algo Trading', 'Machine Learning', 'Private Equity'].map((tag, i) => (
                   <div key={i} style={{ padding: '6px 16px', borderRadius: '6px', background: 'white', border: '1px solid rgba(0,109,109,0.2)', boxShadow: '0 2px 8px rgba(0,109,109,0.06)' }}>
                     <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>{tag}</span>
                   </div>
@@ -132,11 +136,10 @@ export default function Home() {
                 transition={{ delay: 0.65, duration: 0.7 }}
                 style={{ position: 'absolute', top: '175px', right: '8px', width: '210px', background: 'white', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.1)', border: '1px solid rgba(0,109,109,0.1)' }}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(0,109,109,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Globe size={18} style={{ color: '#006D6D' }} />
                   </div>
-                  <span style={{ background: 'rgba(0,180,100,0.1)', color: '#00a060', fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: '999px' }}>92% MATCH</span>
                 </div>
                 <p style={{ color: '#5a9090', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 0.3rem' }}>Systematic Trading</p>
                 <p style={{ color: '#011f1f', fontSize: '1.45rem', fontWeight: 900, margin: '0 0 0.2rem', lineHeight: 1.1 }}>360°<br/>Risk Cover</p>
@@ -164,20 +167,22 @@ export default function Home() {
 
         {/* Responsive: stack on mobile */}
         <style>{`
-          .hero-grid { grid-template-columns: 1fr 1fr; }
+          .hero-grid { grid-template-columns: 1fr; }
           @media (max-width: 1024px) {
             .hero-grid { grid-template-columns: 1fr !important; text-align: center; padding-top: 40px; }
-            .hero-content { display: flex; flex-direction: column; align-items: center; }
+            .hero-content { display: flex; flex-direction: column; align-items: center; width: 100% !important; max-width: 100% !important; }
             .hero-desc { margin-left: auto; margin-right: auto; text-align: center; }
             .hero-title { font-size: 3.2rem !important; }
             .hero-tags, .hero-ctas { justify-content: center; }
-            .hero-tagline { border-left: none !important; padding-left: 0 !important; text-align: center; }
+            .hero-tagline { border-left: none !important; padding-left: 0 !important; text-align: center; justify-content: center; }
             .hero-cards { display: none !important; }
             .home-stat-grid { grid-template-columns: 1fr !important; }
           }
           @media (max-width: 480px) {
             .hero-title { font-size: 2.5rem !important; }
             .hero-pill { transform: scale(0.9); }
+            .hero-tagline { font-size: 1rem !important; gap: 8px !important; }
+            .hero-tagline span { height: 16px !important; }
           }
         `}</style>
       </section>
@@ -219,13 +224,13 @@ export default function Home() {
           <div style={{ textAlign: 'center', marginBottom: '4rem', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
             <h2 className="text-4xl md:text-5xl font-bold" style={{ color: '#011f1f', margin: '0 0 1.5rem 0' }}>Our Core <span style={{ color: '#006D6D' }}>Architecture</span></h2>
             <p style={{ color: '#2d5c5c', fontSize: '1.2rem', lineHeight: 1.6, fontWeight: 300, margin: 0 }}>
-              Advanced quantitative trading methodologies executed flawlessly by industry veterans utilizing institutional-grade infrastructure.
+              Advanced quantitative trading methodologies executed flawlessly by veterans.
             </p>
           </div>
           
           <div className="grid-2-cols">
             {[
-              { icon: BarChart2, title: "Systematic Trading", desc: "Fully funded, high-performance trading capitalizing on market inefficiencies through data-driven, model-based execution.", color: '#006D6D' },
+              { icon: BarChart2, title: "Systematic Trading", desc: "High-performance trading capitalizing on market inefficiencies through data-driven, model-based execution.", color: '#006D6D' },
               { icon: Activity, title: "Equity Investment & Quant Research", desc: "Fundamental and quantitative research-driven equity investments targeting long-term value creation and sustainable growth.", color: '#006D6D' },
               { icon: ShieldCheck, title: "Options & Greeks", desc: "Executing advanced volatility strategies and Greek-based risk management to capture premium decay and capitalize on market mispricing.", color: '#006D6D' },
               { icon: Globe, title: "Risk & Hedging", desc: "Integrating dynamic hedging techniques and real-time portfolio-level risk controls to mitigate exposure and ensure systematic capital preservation.", color: '#006D6D' }
@@ -275,8 +280,8 @@ export default function Home() {
                       <span style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', fontWeight: 'bold', color: '#011f1f', lineHeight: 1 }}><AnimatedCounter end={15} prefix="" suffix="+" /></span>
                       <span style={{ fontSize: '1.8rem', color: '#006D6D', fontWeight: 'bold', marginLeft: '5px' }}>Years</span>
                     </div>
-                    <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#011f1f', margin: '0 0 1rem 0', textTransform: 'uppercase', letterSpacing: '2px' }}>Private Equity</h4>
-                    <p style={{ color: '#2d5c5c', lineHeight: 1.6, fontSize: '0.95rem', margin: 0 }}>Strategic capital allocation across high-potential private markets, focusing on long-term value creation.</p>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#011f1f', margin: '0 0 1rem 0', textTransform: 'uppercase', letterSpacing: '2px' }}>Research and Trading</h4>
+                    <p style={{ color: '#2d5c5c', lineHeight: 1.6, fontSize: '0.95rem', margin: 0 }}>Continuous engagement with evolving market dynamics, combining analytical rigor with disciplined execution.</p>
                   </div>
 
                   <div style={{ textAlign: 'center' }}>
@@ -328,11 +333,11 @@ export default function Home() {
             >
 
               <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 900, color: 'white', lineHeight: 1.1, margin: '0 0 2rem', letterSpacing: '-2px' }}>
-                Intelligence Delivered.<br/>
-                <span style={{ color: '#00afaf' }}>Strategy Accessed.</span>
+                Insight Driven, <br/>
+                <span style={{ color: '#00afaf' }}>Execution Focused Team:</span>
               </h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: 'clamp(1.1rem, 2vw, 1.3rem)', lineHeight: 1.6, maxWidth: '600px', fontWeight: 300 }}>
-                Partner with RRP Investments to leverage elite quantitative models and institutional-grade execution infrastructure.
+                Collaborate and work with RRP Investments to harness advanced quantitative strategies across equity, derivatives for effective decision-making.
               </p>
             </motion.div>
 
@@ -343,10 +348,8 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'flex-start' }}
             >
-              <a 
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdz3AZ5GNRgLTM8KxMwnXWxhDRs8OvrXKqPBGrRAMs-_mQtDg/viewform?usp=send_form" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <Link 
+                to="/careers" 
                 style={{ 
                   width: '100%',
                   maxWidth: '320px',
@@ -363,7 +366,7 @@ export default function Home() {
                 }}
               >
                 Join the Team
-              </a>
+              </Link>
             </motion.div>
             
           </div>

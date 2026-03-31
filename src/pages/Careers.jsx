@@ -23,6 +23,12 @@ export default function Careers() {
         "Knowledge of financial markets, derivatives, and options Greeks",
         "Experience in time series modeling and machine learning frameworks",
         "Strong analytical and problem-solving ability"
+      ],
+      benefits: [
+        "Competitive compensation structure with strong performance-linked variable pay tied to strategy outcomes",
+        "Work-life balance supported by structured workflows and disciplined trading practices",
+        "Continuous learning and growth through exposure to advanced quantitative models, AI/ML techniques, and evolving market strategies",
+        "Opportunity to work in a research-driven and intellectually stimulating environment focused on innovation and analytical rigor"
       ]
     },
     { 
@@ -44,6 +50,12 @@ export default function Careers() {
         "Familiarity with trading platforms, APIs, and order execution systems",
         "Ability to make quick, data-driven decisions under pressure",
         "Basic programming knowledge (Python preferred)"
+      ],
+      benefits: [
+        "Competitive salary with high variable incentives linked to trading performance and risk-adjusted returns",
+        "Balanced work environment with defined processes, minimizing unnecessary stress and promoting consistency",
+        "Hands-on learning and skill development in derivatives, options strategies, and real-time market execution",
+        "Exposure to a disciplined, research-oriented trading ecosystem that encourages continuous improvement and practical learning"
       ]
     },
     { 
@@ -65,6 +77,12 @@ export default function Careers() {
         "Understanding of financial markets and trading workflows (preferred)",
         "Knowledge of high-performance systems and real-time processing",
         "Familiarity with cloud platforms and scalable architectures"
+      ],
+      benefits: [
+        "Attractive compensation with performance-based variable pay, aligned with system impact and efficiency",
+        "Work-life balance supported by structured development cycles and collaborative work culture",
+        "Learning opportunities in building high-performance trading systems, real-time data pipelines, and scalable architectures",
+        "Opportunity to contribute in a technology-driven, research-focused environment integrating finance, data, and execution systems"
       ]
     }
   ];
@@ -83,8 +101,8 @@ export default function Careers() {
           <div className="grid-2-cols" style={{ gap: 0 }}>
             {/* Left Content */}
             <div style={{ padding: 'clamp(2rem, 5vw, 4rem)' }}>
-              <div style={{ color: '#006D6D', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Join the Desk</div>
-              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Careers at <br/><span style={{ color: '#006D6D' }}>RRP Investments.</span></h1>
+              <div style={{ color: '#006D6D', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>JOIN US</div>
+              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Careers at <br/><span style={{ color: '#006D6D' }}>RRP Investments</span></h1>
               <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: 0 }}>
                 {whyWorkWithUs}
               </p>
@@ -114,7 +132,7 @@ export default function Careers() {
           }}>
             <p style={{ color: '#5a9090', fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1rem' }}>Interested in joining us?</p>
             <p style={{ fontSize: '1.25rem', color: '#011f1f', fontWeight: 600, margin: 0 }}>
-              Send your CV/Resume to{' '}
+              Send your CV to{' '}
               <a 
                 href="mailto:hr@rrpinvestments.com" 
                 style={{ color: '#006D6D', textDecoration: 'none', borderBottom: '2px solid rgba(0, 109, 109, 0.3)', transition: 'all 0.3s ease' }}
@@ -149,7 +167,7 @@ export default function Careers() {
                   <p style={{ color: '#2d5c5c', lineHeight: '1.8', fontSize: '1.05rem' }}>{role.overview}</p>
                 </div>
                 
-                <div className="grid-2-cols" style={{ gap: '2rem md:gap-3rem', alignItems: 'flex-start' }}>
+                <div className="grid-3-cols" style={{ gap: '2rem md:gap-3rem', alignItems: 'flex-start' }}>
                   <div>
                     <h3 style={{ fontSize: '1rem', color: '#006D6D', marginBottom: '1rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Key Responsibilities</h3>
                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
@@ -168,6 +186,17 @@ export default function Careers() {
                         <li key={sidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: '#2d5c5c' }}>
                           <div style={{ width: '8px', height: '8px', backgroundColor: '#006D6D', borderRadius: '2px', marginTop: '8px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
                           <span style={{ lineHeight: 1.6 }}>{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '1rem', color: '#006D6D', marginBottom: '1rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Benefits</h3>
+                    <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
+                      {role.benefits.map((benefit, bidx) => (
+                        <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: '#2d5c5c' }}>
+                          <div style={{ width: '8px', height: '8px', backgroundColor: '#006D6D', borderRadius: '2px', marginTop: '8px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
+                          <span style={{ lineHeight: 1.6 }}>{benefit}</span>
                         </li>
                       ))}
                     </ul>

@@ -95,6 +95,33 @@ export default function Internships() {
         "Exposure to real-time Behavioral Finance",
         "Hand-holding for research and trading in your own account"
       ]
+    },
+    {
+      title: "Live Projects",
+      icon: <Star size={24} />,
+      color: "#006D6D",
+      overview: "The Live Project is designed to provide students with structured, real-world exposure to financial markets, where they work on practical assignments spanning equity, derivatives, quantitative analysis, and business understanding. It focuses on applied learning, enabling participants to connect academic concepts with actual market practices in a disciplined and research-oriented environment.",
+      responsibilities: [
+        "Work on structured assignments related to equity, futures, and options markets",
+        "Analyze market data, trends, and price movements using basic analytical techniques",
+        "Support development of trading ideas and strategy frameworks",
+        "Assist in data collection, interpretation, and documentation of insights",
+        "Contribute to tasks involving risk awareness, hedging concepts, and market observations",
+        "Prepare reports, presentations, or summaries based on assigned work"
+      ],
+      skills: [
+        "Basic understanding of financial markets (equity, derivatives preferred)",
+        "Interest in trading, research, and analytical thinking",
+        "Familiarity with Excel or basic data analysis tools like Python",
+        "Strong learning orientation and attention to detail",
+        "Good communication and documentation skills"
+      ],
+      benefits: [
+        "Certificate of Live Project", 
+        "Exposure to real-world market workflows and structured trading practices",
+        "Development of analytical, research, and decision-making skills with deep understanding of equity, derivatives, and / or quant research",
+        "Hand-holding for research and trading in your own account"
+      ]
     }
   ];
 
@@ -111,10 +138,9 @@ export default function Internships() {
           <div className="grid-2-cols" style={{ gap: 0 }}>
             {/* Left Content */}
             <div style={{ padding: 'clamp(2rem, 5vw, 4rem)' }}>
-              <div style={{ color: '#006D6D', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '3px', fontSize: '0.9rem', marginBottom: '1.5rem' }}>Structured Programs</div>
-              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Professional <br/><span style={{ color: '#006D6D' }}>Internships.</span></h1>
+              <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 800, color: '#011f1f', marginBottom: '2rem', lineHeight: 1.2 }}>Structured Internships <br/><span style={{ color: '#006D6D' }}>and Live Projects</span></h1>
               <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: 0 }}>
-                Gaining practical exposure through an internship is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles.
+                Gaining practical exposure through an internship / live project is essential before entering a full-time role, especially in dynamic fields like financial markets and trading. While academic learning provides conceptual clarity, real-world experience helps develop decision-making ability, market understanding, risk awareness, and discipline. An internship / live project allows candidates to apply theoretical knowledge in live market environments, understand workflows, and build the analytical and professional skills required to perform effectively in high-responsibility roles. Internship / live projects also offers an opportunity to candidates and the company to test the waters before the deep dive.
               </p>
             </div>
 
@@ -139,7 +165,7 @@ export default function Internships() {
             onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 109, 109,0.5)'; }} 
             onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 109, 109,0.35)'; }}
           >
-            Apply for Internship
+            Apply for Internship / Live Project
           </a>
         </div>
 
