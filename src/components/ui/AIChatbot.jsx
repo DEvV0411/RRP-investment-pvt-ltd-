@@ -8,13 +8,11 @@ RRP Investments is an institutional trading firm specializing in algorithmic tra
 Key information:
 - HQ: Mumbai, Maharashtra, India.
 - Email: hr@rrpinvestments.com (Careers/Internships/Inquiries).
-- Trading Hours: Monday to Friday: 9:15 AM - 3:30 PM IST (NSE/BSE Market Hours).
 - Phone: +91 (22) 1234-5678.
 - Careers: We actively hire quantitative analysts, software engineers, and interns via the 'Careers' or 'Internships' section on our site.
 If the user asks a severely off-topic question not related to finance, trading, or careers at RRP, politely redirect them. Do not hallucinate external links.`;
 
 const FAQs = [
-  "What are your trading hours?",
   "How do I apply for an internship?",
   "What is your contact email?"
 ];

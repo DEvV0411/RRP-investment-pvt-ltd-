@@ -63,7 +63,7 @@ export default function About() {
             
             <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
               <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
-              INTELLIGENCE DELIVERED.
+              INTELLIGENCE DELIVERED
               <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
             </p>
 

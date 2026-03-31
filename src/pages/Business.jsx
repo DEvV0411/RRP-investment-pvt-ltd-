@@ -1,13 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { Network, Activity, PieChart, Layers, Briefcase } from 'lucide-react';
+import { Network, TrendingUp, PieChart, Layers, Briefcase } from 'lucide-react';
 import './Pages.css';
 
 export default function Business() {
   const operations = [
     {
       title: "Algorithmic Trading, AI & Data-Driven Systems",
-      icon: <Activity size={28} />,
+      icon: <TrendingUp size={28} />,
       accent: "#006D6D",
       desc: "The company develops and deploys automated trading systems powered by Artificial Intelligence, Machine Learning, Deep Learning, and Reinforcement Learning. These models process large volumes of market data, identify patterns, and execute trades systematically with minimal manual intervention. The focus is on building adaptive strategies that continuously evolve with changing market conditions on the National Stock Exchange of India, supported by robust data analytics and backtesting frameworks."
     },

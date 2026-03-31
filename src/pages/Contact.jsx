@@ -10,9 +10,6 @@ export default function Contact() {
 
         <div className="page-header mt-12 mb-16">
           <h1 className="page-title">Contact Our Desk</h1>
-          <p className="page-subtitle max-w-3xl mx-auto" style={{ textAlign: 'center' }}>
-            Whether you're inquiring about partnerships, recruitment, or general corporate information — we're here to help.
-          </p>
         </div>
 
         <div className="grid-2-cols" style={{ gap: '3rem', alignItems: 'flex-start' }}>
@@ -20,8 +17,6 @@ export default function Contact() {
           {/* Left: Contact Details */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div style={{ background: 'linear-gradient(160deg, #eaf4f4 0%, white 100%)', border: '1px solid rgba(0, 109, 109, 0.15)', borderRadius: '16px', padding: 'clamp(1.5rem, 5vw, 3.5rem)', height: '100%', borderTop: '4px solid #006D6D', boxShadow: '0 4px 24px rgba(0, 109, 109, 0.07)' }}>
-              <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '2.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109, 0.1)' }}>Headquarters</h2>
-
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
@@ -29,7 +24,6 @@ export default function Contact() {
                     <Building2 size={22} />
                   </div>
                   <div>
-                    <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Registered Office</p>
                     <p style={{ color: '#011f1f', fontWeight: 600, fontSize: '1rem', lineHeight: 1.6 }}>RRP Investments Private Limited</p>
                     <p style={{ color: '#2d5c5c', lineHeight: 1.7, marginTop: '0.25rem', fontSize: '0.95rem' }}>7th Floor, B Wing, Khandelwal House,<br/>Poddar Rd, Near Poddar Park,<br/>Malad (E), Mumbai-400097</p>
                   </div>
@@ -50,22 +44,12 @@ export default function Contact() {
                     <Phone size={22} />
                   </div>
                   <div>
-                    <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Direct Lines</p>
+                    <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Contact.:</p>
                     <a href="tel:+919821724589" style={{ color: '#2d5c5c', textDecoration: 'none', fontWeight: 600, fontSize: '1.1rem' }}>+91 98217 24589</a>
                     <p style={{ color: '#5a9090', fontSize: '0.85rem', marginTop: '0.3rem' }}>Availability: After 3:30 PM IST (Mon-Fri)</p>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(0, 109, 109, 0.08)', border: '1px solid rgba(0, 109, 109, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#006D6D', flexShrink: 0 }}>
-                    <Clock size={22} />
-                  </div>
-                  <div>
-                    <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Trading Hours</p>
-                    <p style={{ color: '#011f1f', fontWeight: 600, fontSize: '1rem' }}>Mon – Fri: 9:15 AM – 3:30 PM IST</p>
-                    <p style={{ color: '#5a9090', fontSize: '0.85rem', marginTop: '0.2rem' }}>NSE / BSE Market Hours</p>
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -76,7 +60,7 @@ export default function Contact() {
               <h2 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#011f1f', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid rgba(0, 109, 109, 0.1)' }}>Send an Inquiry</h2>
               
               <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
-                Please use our official inquiry form to reach out for partnerships, recruitment, or general information. Our team will review your message and respond within 1–2 business days.
+                Our team will review your message and respond soon.
               </p>
 
               <a 

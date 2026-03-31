@@ -12,17 +12,28 @@
   margin-bottom: 4rem;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .logo-image-footer {
-  height: 50px;
+  height: min(150px, 20vw);
   width: auto;
+  max-width: 400px;
   mix-blend-mode: multiply;
+  margin-bottom: 1.5rem;
 }
 
 .footer-brand .footer-desc {
-  margin: 1.5rem 0;
+  margin: 0 auto;
   color: #2d5c5c;
-  max-width: 400px;
-  font-size: 0.95rem;
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .social-links {

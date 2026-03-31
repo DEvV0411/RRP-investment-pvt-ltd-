@@ -14,14 +14,15 @@ export default function Home() {
       {/* Hero Section — Split Layout with Floating Cards */}
       <section style={{ position: 'relative', width: '100%', minHeight: '100vh', overflow: 'hidden', background: '#f5fafa', display: 'flex', alignItems: 'center' }}>
         
-        {/* Background image — faded on right half */}
+        {/* Background image — Full width immersive backdrop */}
         <img
           src="/bulls-bears-hero.png"
           alt="Bulls and Bears"
-          style={{ position: 'absolute', right: 0, top: 0, width: '58%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.18, pointerEvents: 'none' }}
+          className="hero-bg-img"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', opacity: 0.12, pointerEvents: 'none' }}
         />
-        {/* Radial overlay so left stays clean white */}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(110deg, #f5fafa 40%, rgba(245,250,250,0.6) 65%, transparent 100%)' }} />
+        {/* Soft centered overlay to ensure readability */}
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at center, transparent 20%, rgba(245,250,250,0.8) 100%)', opacity: 0.6 }} />
         {/* Top teal accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, transparent, #006D6D 30%, #008888 70%, transparent)', zIndex: 5 }} />
 
@@ -48,7 +49,7 @@ export default function Home() {
               
               <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', margin: '0 0 2rem', padding: '0 10px', display: 'flex', alignItems: 'center', gap: '15px' }} className="hero-tagline">
                 <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
-                INTELLIGENCE DELIVERED.
+                INTELLIGENCE DELIVERED
                 <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
               </p>
 

@@ -191,7 +191,7 @@ export default function Careers() {
                     </ul>
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '1rem', color: '#006D6D', marginBottom: '1rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Benefits</h3>
+                    <h3 style={{ fontSize: '1rem', color: '#006D6D', marginBottom: '1rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>Candidate benefits</h3>
                     <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
                       {role.benefits.map((benefit, bidx) => (
                         <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', color: '#2d5c5c' }}>
