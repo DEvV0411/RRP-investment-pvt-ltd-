@@ -39,7 +39,7 @@ export default function Home() {
               {/* Label pill */}
               <div className="hero-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '999px', background: 'rgba(0,109,109,0.08)', border: '1px solid rgba(0,109,109,0.2)', marginBottom: '2rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#006D6D', display: 'inline-block', boxShadow: '0 0 8px rgba(0,109,109,0.6)' }} />
-                <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>Quantitative Trading and Investment Firm</span>
+                <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase' }}>QUANTITATIVE TRADING AND INVESTMENT FIRM</span>
               </div>
 
               <h1 className="hero-title" style={{ fontSize: 'clamp(2.8rem, 5vw, 4.8rem)', fontWeight: 900, color: '#006D6D', lineHeight: 1.08, margin: '0 0 1.2rem', letterSpacing: '-1.5px' }}>
@@ -49,7 +49,7 @@ export default function Home() {
               
               <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', margin: '0 0 2rem', padding: '0 10px', display: 'flex', alignItems: 'center', gap: '15px' }} className="hero-tagline">
                 <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
-                Intelligence delivered.
+                INTELLIGENCE DELIVERED.
                 <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
               </p>
 
@@ -59,7 +59,7 @@ export default function Home() {
 
               {/* Domain tags */}
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '2.5rem', justifyContent: 'center' }} className="hero-tags">
-                {['Algo Trading', 'Machine Learning', 'Private Equity'].map((tag, i) => (
+                {['ALGO TRADING', 'MACHINE LEARNING', 'PRIVATE EQUITY'].map((tag, i) => (
                   <div key={i} style={{ padding: '6px 16px', borderRadius: '6px', background: 'white', border: '1px solid rgba(0,109,109,0.2)', boxShadow: '0 2px 8px rgba(0,109,109,0.06)' }}>
                     <span style={{ color: '#006D6D', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>{tag}</span>
                   </div>
