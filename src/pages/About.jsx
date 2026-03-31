@@ -53,13 +53,17 @@ export default function About() {
         {/* Elite Profile Header */}
         <section className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#006D6D', marginBottom: '1rem', letterSpacing: '-1px' }}>
+            <div style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'center' }}>
+              <img src="/logo.jpg" alt="RRP Investments Logo" style={{ height: 'clamp(100px, 15vw, 180px)', width: 'auto', objectFit: 'contain' }} />
+            </div>
+            
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#006D6D', marginBottom: '1.5rem', textAlign: 'center', margin: '0 auto', width: 'fit-content' }}>
               RRP Investments Private Limited
             </h1>
             
             <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
               <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
-              Intelligence delivered.
+              INTELLIGENCE DELIVERED.
               <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
             </p>
 
@@ -72,21 +76,21 @@ export default function About() {
         </section>
 
         {/* Vision, Mission, Who We Are */}
-        <section className="mb-24 py-12" style={{ background: 'linear-gradient(180deg, rgba(240,252,252,0) 0%, rgba(234,244,244,0.6) 100%)', borderRadius: '24px', padding: '4rem 2rem' }}>
-          <div className="grid-3-cols" style={{ gap: '3rem' }}>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Vision</h3>
-              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>To enable people to contribute to and share wealth of a nation through high professional excellence in capital markets.</p>
+        <section className="mb-24 py-12" style={{ background: 'linear-gradient(180deg, rgba(234,244,244,0.1) 0%, rgba(234,244,244,0.8) 100%)', borderRadius: '40px', padding: '5rem 4rem' }}>
+          <div className="grid-3-cols" style={{ gap: '0' }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: 'center', padding: '0 2rem', borderRight: '1.5px solid rgba(0, 109, 109, 0.12)' }}>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem' }}>Vision</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>To enable people to contribute to and share wealth of a nation through high professional excellence in capital markets.</p>
             </motion.div>
             
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Mission</h3>
-              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>To provide unparalleled service with integrity to our clients to create value.</p>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.15 }} style={{ textAlign: 'center', padding: '0 2rem', borderRight: '1.5px solid rgba(0, 109, 109, 0.12)' }}>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem' }}>Mission</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>To provide unparalleled service with integrity to our clients to create value.</p>
             </motion.div>
-
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
-              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>Who We Are</h3>
-              <p style={{ color: '#2d5c5c', fontSize: '1.05rem', lineHeight: 1.7 }}>We are a group of highly experienced professionals who strive to create value through our expertise in capital markets.</p>
+            
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} style={{ textAlign: 'center', padding: '0 2rem' }}>
+              <h3 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#006D6D', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '1.5rem' }}>Who We Are</h3>
+              <p style={{ color: '#2d5c5c', fontSize: '1.1rem', lineHeight: 1.7, margin: 0 }}>We are a group of highly experienced professionals who strive to create value through our expertise in capital markets.</p>
             </motion.div>
           </div>
         </section>
@@ -100,8 +104,7 @@ export default function About() {
           <div className="management-table-wrapper">
               <div className="management-table-header">
                 <div className="th th-profile">LEADERSHIP PROFILE</div>
-                <div className="th th-mandate">STRATEGIC MANDATE</div>
-                <div className="th th-partner">BUSINESS PARTNER</div>
+                <div className="th th-mandate" style={{ flex: '2' }}>STRATEGIC MANDATE</div>
               </div>
             
             <div className="management-table-body">
@@ -123,7 +126,7 @@ export default function About() {
                       <p className="leader-role">{leader.role}</p>
                     </div>
                   </div>
-                  <div className="td-bio">
+                  <div className="td-bio" style={{ flex: '2' }}>
                     <p>{leader.bio.split('\n\n')[0]}</p>
                     {leader.bio.split('\n\n').slice(1).map((para, pidx) => (
                       <p key={pidx} style={{ marginTop: '1rem' }}>{para}</p>
@@ -156,12 +159,6 @@ export default function About() {
                         </>
                       )}
                     </ul>
-                  </div>
-                  <div className="td-partner">
-                    <div className="partner-cell-content">
-                      <img src="/nirmal-bang-logo.png" alt="Nirmal Bang" style={{ height: '30px', width: 'auto', marginBottom: '10px' }} />
-                      <p style={{ fontSize: '0.8rem', color: '#5a9090', fontWeight: 600 }}>Operational Excellence</p>
-                    </div>
                   </div>
                 </motion.div>
               ))}

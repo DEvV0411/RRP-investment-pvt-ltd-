@@ -25,17 +25,16 @@ export default function Home() {
         {/* Top teal accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, transparent, #006D6D 30%, #008888 70%, transparent)', zIndex: 5 }} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', paddingTop: '160px', paddingBottom: '110px' }}>
-          <div className="hero-grid" style={{ display: 'grid', gap: '3rem', alignItems: 'center' }}>
-
-            {/* ── Headline + Tags + CTAs (Centrally Aligned) ── */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: 'easeOut' }}
-              className="hero-content"
-              style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%', maxWidth: '900px', margin: '0 auto' }}
-            >
+        <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', paddingTop: '100px', paddingBottom: '100px' }}>
+          
+          {/* Centered Headline Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: 'easeOut' }}
+            className="hero-content"
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', width: '100%', maxWidth: '900px', zIndex: 20 }}
+          >
               {/* Label pill */}
               <div className="hero-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '999px', background: 'rgba(0,109,109,0.08)', border: '1px solid rgba(0,109,109,0.2)', marginBottom: '2rem' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#006D6D', display: 'inline-block', boxShadow: '0 0 8px rgba(0,109,109,0.6)' }} />
@@ -66,17 +65,18 @@ export default function Home() {
                 ))}
               </div>
 
-            </motion.div>
+          </motion.div>
 
-            {/* ── Right: Floating Staggered Cards ── */}
-            <div className="hero-cards" style={{ position: 'relative', height: '520px' }}>
+          {/* ── Floating Staggered Cards (Flanking the center) ── */}
+          <div className="hero-cards" style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
+            <div className="container" style={{ position: 'relative', height: '100%', pointerEvents: 'none' }}>
 
-              {/* Card 1 — top left (Restored & Updated) */}
+              {/* Card 1 — Left Top */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3, duration: 0.7 }}
-                style={{ position: 'absolute', top: '20px', left: '0px', width: '240px', background: 'white', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.12)', border: '1px solid rgba(0,109,109,0.1)' }}
+                style={{ position: 'absolute', top: '15%', left: '0', width: '240px', background: 'white', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.12)', border: '1px solid rgba(0,109,109,0.1)', pointerEvents: 'auto' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(0,109,109,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -89,12 +89,12 @@ export default function Home() {
                 <p style={{ color: '#5a9090', fontSize: '0.76rem', margin: 0 }}>Systematic signal · NSE</p>
               </motion.div>
 
-              {/* Card 2 — top right, offset lower */}
+              {/* Card 2 — Right Top */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5, duration: 0.7 }}
-                style={{ position: 'absolute', top: '0px', right: '0px', width: '230px', background: 'linear-gradient(135deg, #006D6D, #008080)', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.25)' }}
+                style={{ position: 'absolute', top: '10%', right: '0', width: '230px', background: 'linear-gradient(135deg, #006D6D, #008080)', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.25)', pointerEvents: 'auto' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -107,12 +107,12 @@ export default function Home() {
                 <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.76rem', margin: 0 }}>Greeks-based · Hedged</p>
               </motion.div>
 
-              {/* Card 3 — middle left, large */}
+              {/* Card 3 — Left Bottom */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.45, duration: 0.7 }}
-                style={{ position: 'absolute', top: '160px', left: '28px', width: '270px', background: 'white', borderRadius: '16px', padding: '1.6rem', boxShadow: '0 12px 40px rgba(0,109,109,0.14)', border: '1px solid rgba(0,109,109,0.1)' }}
+                style={{ position: 'absolute', bottom: '25%', left: '40px', width: '270px', background: 'white', borderRadius: '16px', padding: '1.6rem', boxShadow: '0 12px 40px rgba(0,109,109,0.14)', border: '1px solid rgba(0,109,109,0.1)', pointerEvents: 'auto' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(0,109,109,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -129,12 +129,12 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Card 4 — middle right */}
+              {/* Card 4 — Right Bottom */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.65, duration: 0.7 }}
-                style={{ position: 'absolute', top: '175px', right: '8px', width: '210px', background: 'white', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.1)', border: '1px solid rgba(0,109,109,0.1)' }}
+                style={{ position: 'absolute', bottom: '20%', right: '20px', width: '210px', background: 'white', borderRadius: '16px', padding: '1.4rem', boxShadow: '0 8px 32px rgba(0,109,109,0.1)', border: '1px solid rgba(0,109,109,0.1)', pointerEvents: 'auto' }}
               >
                 <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', marginBottom: '0.8rem' }}>
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(0,109,109,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -146,17 +146,17 @@ export default function Home() {
                 <p style={{ color: '#5a9090', fontSize: '0.76rem', margin: 0 }}>Dynamic Hedging</p>
               </motion.div>
 
-              {/* Card 5 — bottom center */}
+              {/* Card 5 — Bottom Center Stats */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.7 }}
-                style={{ position: 'absolute', bottom: '0px', left: '40px', right: '0px', background: 'linear-gradient(135deg, #eaf4f4 0%, #f0f9f9 100%)', borderRadius: '16px', padding: '1.3rem 1.6rem', boxShadow: '0 4px 20px rgba(0,109,109,0.1)', border: '1px solid rgba(0,109,109,0.12)', display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'space-around' }}
+                style={{ position: 'absolute', bottom: '25px', left: '0', right: '0', margin: '0 auto', width: '100%', maxWidth: '580px', background: 'linear-gradient(135deg, rgba(234,244,244,0.95) 0%, rgba(255,255,255,0.95) 100%)', backdropFilter: 'blur(10px)', borderRadius: '16px', padding: '1.2rem 1rem', boxShadow: '0 12px 40px rgba(0,109,109,0.15)', border: '1px solid rgba(0,109,109,0.12)', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', alignItems: 'center', pointerEvents: 'auto' }}
               >
                 {[{ val: '100%', label: 'Research' }, { val: 'PE', label: 'Private Equity' }, { val: 'Multi', label: 'Asset' }].map((stat, i) => (
-                  <div key={i} style={{ textAlign: 'center' }}>
-                    <p style={{ color: '#006D6D', fontSize: '1.3rem', fontWeight: 900, margin: 0, lineHeight: 1 }}>{stat.val}</p>
-                    <p style={{ color: '#5a9090', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', margin: '4px 0 0' }}>{stat.label}</p>
+                  <div key={i} style={{ textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(0,109,109,0.1)' : 'none' }}>
+                    <p style={{ color: '#006D6D', fontSize: '1.4rem', fontWeight: 900, margin: 0, lineHeight: 1 }}>{stat.val}</p>
+                    <p style={{ color: '#5a9090', fontSize: '0.65rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1.5px', margin: '6px 0 0' }}>{stat.label}</p>
                   </div>
                 ))}
               </motion.div>

@@ -7,7 +7,7 @@ const SYSTEM_PROMPT = `You are the official AI Assistant for RRP Investments Pri
 RRP Investments is an institutional trading firm specializing in algorithmic trading and quantitative strategies. 
 Key information:
 - HQ: Mumbai, Maharashtra, India.
-- Email: desk@rrpinvestments.in (General Info), hr@rrpinvestments.in (Careers/Internships).
+- Email: hr@rrpinvestments.com (Careers/Internships/Inquiries).
 - Trading Hours: Monday to Friday: 9:15 AM - 3:30 PM IST (NSE/BSE Market Hours).
 - Phone: +91 (22) 1234-5678.
 - Careers: We actively hire quantitative analysts, software engineers, and interns via the 'Careers' or 'Internships' section on our site.
@@ -77,7 +77,7 @@ export default function AIChatbot() {
       setMessages((prev) => [...prev, { role: 'assistant', content: botReply }]);
     } catch (error) {
       console.error("Chat API Error:", error);
-      setMessages((prev) => [...prev, { role: 'assistant', content: "I'm sorry, I'm currently unable to connect to my secure servers. Please try again later or contact desk@rrpinvestments.in directly." }]);
+      setMessages((prev) => [...prev, { role: 'assistant', content: "I'm sorry, I'm currently unable to connect to my secure servers. Please try again later or contact hr@rrpinvestments.com directly." }]);
     } finally {
       setIsLoading(false);
     }

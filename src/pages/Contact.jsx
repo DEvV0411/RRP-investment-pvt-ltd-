@@ -41,8 +41,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ color: '#006D6D', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold', marginBottom: '0.4rem' }}>Electronic Mail</p>
-                    <a href="mailto:desk@rrpinvestments.in" style={{ color: '#011f1f', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'block' }}>desk@rrpinvestments.in</a>
-                    <a href="mailto:hr@rrpinvestments.in" style={{ color: '#2d5c5c', textDecoration: 'none', fontSize: '0.9rem', display: 'block', marginTop: '0.25rem' }}>hr@rrpinvestments.in <span style={{ fontSize: '0.8rem', color: '#5a9090' }}>(Careers)</span></a>
+                    <a href="mailto:hr@rrpinvestments.com" style={{ color: '#011f1f', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'block' }}>hr@rrpinvestments.com</a>
                   </div>
                 </div>
 
