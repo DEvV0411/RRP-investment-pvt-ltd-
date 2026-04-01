@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { ArrowRight, TrendingUp, ShieldCheck, BarChart2, Briefcase, Activity, Globe, ChevronRight } from 'lucide-react';
+import Tagline from '../components/ui/Tagline';
 import TextReveal from '../components/ui/TextReveal';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import { Link } from 'react-router-dom';
@@ -47,11 +48,9 @@ export default function Home() {
                 Investments
               </h1>
               
-              <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', margin: '0 0 2rem', padding: '0 10px', display: 'flex', alignItems: 'center', gap: '15px' }} className="hero-tagline">
-                <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
-                INTELLIGENCE DELIVERED
-                <span style={{ height: '24px', width: '2px', background: '#011f1f' }}></span>
-              </p>
+            <div style={{ marginBottom: '3rem' }}>
+              <Tagline size="1.25rem" iconSize={24} />
+            </div>
 
               <p style={{ color: '#2d5c5c', fontSize: '1.15rem', lineHeight: 1.8, marginBottom: '2.5rem', maxWidth: '650px' }} className="hero-desc">
                 A technology-driven, research-oriented trading organization integrating algorithmic models, AI/ML, and disciplined risk management in Indian financial markets.
@@ -119,7 +118,6 @@ export default function Home() {
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(0,109,109,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <ShieldCheck size={18} style={{ color: '#006D6D' }} />
                   </div>
-                  <span style={{ background: 'rgba(0,109,109,0.08)', color: '#006D6D', fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: '999px' }}>95% MATCH</span>
                 </div>
                 <p style={{ color: '#5a9090', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 0.3rem' }}>Quantitative Research</p>
                 <p style={{ color: '#011f1f', fontSize: '1.5rem', fontWeight: 900, margin: '0 0 0.4rem', lineHeight: 1.1 }}>ML-Driven<br/>Signals</p>

@@ -1,6 +1,6 @@
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Shield, TrendingUp, Target } from 'lucide-react';
+import Tagline from '../components/ui/Tagline';
 import './Pages.css';
 
 export default function About() {
@@ -54,18 +54,16 @@ export default function About() {
         <section className="text-center mb-16">
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div style={{ marginBottom: '4rem', display: 'flex', justifyContent: 'center' }}>
-              <img src="/logo.jpg" alt="RRP Investments Logo" style={{ height: 'clamp(100px, 15vw, 180px)', width: 'auto', objectFit: 'contain' }} />
+              <img src="/logo.png" alt="RRP Investments Logo" style={{ height: 'clamp(100px, 20vw, 220px)', width: 'auto', objectFit: 'contain' }} />
             </div>
             
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, color: '#006D6D', marginBottom: '1.5rem', textAlign: 'center', margin: '0 auto', width: 'fit-content' }}>
               RRP Investments Private Limited
             </h1>
             
-            <p style={{ color: '#011f1f', fontWeight: 700, fontSize: '1.25rem', letterSpacing: '3px', textTransform: 'uppercase', marginBottom: '3rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
-              <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
-              INTELLIGENCE DELIVERED
-              <span style={{ height: '20px', width: '2px', background: '#011f1f' }}></span>
-            </p>
+            <div style={{ marginBottom: '3rem' }}>
+              <Tagline size="1.25rem" />
+            </div>
 
             <div className="title-underline center"></div>
             
