@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { CheckCircle2, BrainCircuit, Laptop, Target, Rocket, Star } from 'lucide-react';
+import { BrainCircuit, Laptop, Target, Rocket, Star } from 'lucide-react';
 import './Pages.css';
 
 export default function Internships() {
@@ -166,7 +166,7 @@ export default function Internships() {
             onMouseOver={(e) => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 109, 109,0.5)'; }} 
             onMouseOut={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 109, 109,0.35)'; }}
           >
-            Apply for Internship / Live Project
+            Apply for Online Internship / Online Live Project
           </a>
         </div>
 
@@ -215,12 +215,12 @@ export default function Internships() {
                             Skills Required
                          </h3>
                          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
-                           {internship.skills.map((req, ridx) => (
-                              <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
-                                 <CheckCircle2 size={18} style={{ color: internship.color, flexShrink: 0, marginTop: '2px' }} />
-                                 <span style={{ lineHeight: 1.6, fontSize: '1rem' }}>{req}</span>
-                              </li>
-                           ))}
+                            {internship.skills.map((req, ridx) => (
+                               <li key={ridx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
+                                  <div style={{ width: '8px', height: '8px', backgroundColor: internship.color, borderRadius: '2px', marginTop: '6px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
+                                  <span style={{ lineHeight: 1.6, fontSize: '1rem' }}>{req}</span>
+                               </li>
+                            ))}
                          </ul>
                        </div>
                        

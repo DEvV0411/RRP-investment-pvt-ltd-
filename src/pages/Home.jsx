@@ -100,7 +100,6 @@ export default function Home() {
                   <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <TrendingUp size={18} style={{ color: 'white' }} />
                   </div>
-                  <span style={{ background: 'rgba(255,255,255,0.2)', color: 'white', fontSize: '0.72rem', fontWeight: 700, padding: '3px 10px', borderRadius: '999px' }}>98% MATCH</span>
                 </div>
                 <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', margin: '0 0 0.3rem' }}>Options Strategy</p>
                 <p style={{ color: 'white', fontSize: '1.6rem', fontWeight: 900, margin: '0 0 0.2rem', lineHeight: 1 }}>Delta Neutral</p>

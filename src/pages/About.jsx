@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Shield, TrendingUp, Target } from 'lucide-react';
 import Tagline from '../components/ui/Tagline';
@@ -166,10 +167,10 @@ export default function About() {
 
         {/* Operating Partnership Strip */}
         <section className="py-12 border-t" style={{ borderColor: 'rgba(0, 109, 109, 0.1)' }}>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 opacity-0.7">
-            <p style={{ color: '#5a9090', fontSize: '0.75rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '3px', margin: 0 }}>Business Partner</p>
-            <div className="hidden md:block" style={{ height: '1px', width: '60px', background: 'rgba(0, 109, 109, 0.2)' }}></div>
-            <img src="/nirmal-bang-logo.png" alt="Nirmal Bang" style={{ height: '42px', width: 'auto', objectFit: 'contain' }} />
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 opacity-0.85">
+            <p style={{ color: '#5a9090', fontSize: '0.9rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '4px', margin: 0 }}>Business Partner</p>
+            <div className="hidden md:block" style={{ height: '1.5px', width: '80px', background: 'rgba(0, 109, 109, 0.25)' }}></div>
+            <img src="/nirmal-bang-logo.png" alt="Nirmal Bang" style={{ height: '56px', width: 'auto', objectFit: 'contain' }} />
           </div>
         </section>
 
