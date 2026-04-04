@@ -1,8 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
-export default function Tagline({ size = '1.25rem', gap = '20px', color = '#011f1f' }) {
-  const pipeStyle = { color: '#006D6D', fontWeight: 300, opacity: 0.6 };
+export default function Tagline({ size = '1.25rem', gap = '10px', color = '#011f1f' }) {
+  const pipeStyle = { color: '#011f1f', fontWeight: 300, opacity: 0.8 };
   
   const content = (
     <div 

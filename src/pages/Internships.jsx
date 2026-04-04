@@ -231,7 +231,7 @@ export default function Internships() {
                          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', padding: 0, margin: 0, listStyle: 'none' }}>
                            {internship.benefits.map((benefit, bidx) => (
                               <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
-                                 <Star size={18} style={{ color: "#d4af37", fill: "#d4af37", flexShrink: 0, marginTop: '2px' }} />
+                                 <div style={{ width: '8px', height: '8px', backgroundColor: internship.color, borderRadius: '2px', marginTop: '6px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
                                  <span style={{ lineHeight: 1.6, fontSize: '1rem', fontWeight: 600 }}>{benefit}</span>
                               </li>
                            ))}
