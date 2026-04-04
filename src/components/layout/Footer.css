@@ -23,7 +23,6 @@
   height: min(150px, 20vw);
   width: auto;
   max-width: 400px;
-  mix-blend-mode: multiply;
   margin-bottom: 1.5rem;
 }
 
