@@ -232,7 +232,7 @@ export default function Internships() {
                            {internship.benefits.map((benefit, bidx) => (
                               <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: '#2d5c5c' }}>
                                  <div style={{ width: '8px', height: '8px', backgroundColor: internship.color, borderRadius: '2px', marginTop: '6px', flexShrink: 0, transform: 'rotate(45deg)' }}></div>
-                                 <span style={{ lineHeight: 1.6, fontSize: '1rem', fontWeight: 600 }}>{benefit}</span>
+                                 <span style={{ lineHeight: 1.6, fontSize: '1rem' }}>{benefit}</span>
                               </li>
                            ))}
                          </ul>
