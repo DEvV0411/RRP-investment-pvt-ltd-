@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import StockTicker from '../ui/StockTicker';
+import logo from '/logo.png?v=2';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -34,7 +35,7 @@ export default function Navbar() {
       <header className={`nav-brand-strip ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <Link to="/" className="nav-logo-link">
-            <img src="/logo.png" alt="RRP Investments" className="logo-image" />
+            <img src={logo} alt="RRP Investments" className="logo-image" />
           </Link>
 
           {/* Desktop links inside the same bar */}
