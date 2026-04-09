@@ -16,7 +16,10 @@ export default function SEO({ title, description, name = "RRP Investments Privat
       <meta name="twitter:creator" content={name} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      
+      {/* Social Image */}
+      <meta property="og:image" content="/logo.png" />
+      <meta name="twitter:image" content="/logo.png" />
     </Helmet>
   );
 }
